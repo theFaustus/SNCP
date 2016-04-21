@@ -463,6 +463,20 @@ h3.title span {
     color: #18c9d2;
 }
 
+h3.titleHeader {
+    margin-left: 20%;
+    margin-top : 1.5%;
+    margin-bottom: 4%;
+    font-size: 1.8em;
+    color: #000;
+    font-weight: 800;
+}
+
+h3.titleHeader span {
+    color: #18c9d2;
+}
+
+
 p span {
     color: #18c9d2;
 }
@@ -2076,7 +2090,9 @@ h2.typoh2 {
 
 /*---- responsive-design -----*/
 
-@media(max-width:1440px) {}
+@media(max-width:1440px) {
+
+    }
 
 @media(max-width:1366px) {
     .contact-grdl {

@@ -51,10 +51,9 @@
                 <h1><a href="{{url('index')}}"><img src="{{asset('images/logo.png')}}" alt="">ACP</a></h1>
             </div>
             <!--navigation-->
-            <div class="header-text navbar-left">
-                <p> Revistă ştiinţifico-practică medicală online a <span>asociației chirurgilor pediatrici</span> din Republica Moldova
-                <p>
-            </div>
+                <h3 class = "titleHeader"> Revistă ştiinţifico-practică medicală online a <span>asociației chirurgilor pediatrici</span> din Republica Moldova
+                </h3>
+
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -62,17 +61,5 @@
                 <span class="icon-bar"></span>
             </button>
             <div class="header-right">
-                <div class="top-nav-text">
-                    <ul>
-                        <li>Contactează-ne : <span>+11 111 2222</span></li>
-                        <li>Email : <a class="email-link" href="mailto:example@mail.com">ismp@mail.com</a></li>
-                        <li>
-                            <ul class="social-icons">
-                                <li>
-                                    <a href="https://www.facebook.com/pages/Centrul-Mamei-%C8%99i-al-Copilului/152477004840913?fref=ts" target="_blank"></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+
 
