@@ -1,12 +1,12 @@
 <!--footer-->
 <div class="footer">
     <div class="container">
-        <h3 class="title">GET IN <span>TOUCH</span></h3>
+        <h3 class="title">Fii <span>alături</span></h3>
         <div class="footer-grids">
             <div class="col-md-6 footer-left">
-                <h5><a href="#">Ready to hire me?</a></h5>
+                <h5><a href="#">Ai vreo idee?</a></h5>
                 <div class="more">
-                    <a href="contact.html" class="effect6">Get in touch</a>
+                    <a href="contact.html" class="effect6">Contactează-ne</a>
                 </div>
             </div>
             <div class="col-md-6 footer-right">
@@ -24,7 +24,7 @@
                         <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
                     </div>
                     <div class="col-xs-10 contact-grdr">
-                        <p>345 Diamond Street,London.</p>
+                        <p>Burebista 45</p>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
@@ -33,7 +33,7 @@
                         <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                     </div>
                     <div class="col-xs-10 contact-grdr">
-                        <p><a href="mailto:example@mail.com">mail@example.com</a></p>
+                        <p><a href="mailto:example@mail.com">imsp@mail.com</a></p>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
