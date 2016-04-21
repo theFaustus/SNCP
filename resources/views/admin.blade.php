@@ -3,7 +3,7 @@
 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-left">
         <li class="active"><a
-                    href="index.php"><span>A</span><span>C</span><span>A</span><span>S</span><span>Ă</span></a></li>
+                    href="{{url('index')}}"><span>A</span><span>C</span><span>A</span><span>S</span><span>Ă</span></a></li>
         <li><a href="{{url('search')}}"
                class="link link--yaku"><span>C</span><span>Ă</span><span>U</span><span>T</span><span>A</span><span>R</span><span>E</span></a>
         </li>
@@ -27,13 +27,13 @@
     </ul>
     <div class="clearfix"></div>
 </div>
-<!--//navigation-->
+
+
 </div>
 <div class="clearfix"></div>
 </div>
 </nav>
 </div>
-<!--//header-->
 
 <div class="services">
     <div class="container">
