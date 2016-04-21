@@ -476,6 +476,18 @@ h3.titleHeader span {
     color: #18c9d2;
 }
 
+h3.titleBody {
+    margin-top : 5%;
+    margin-bottom: 4%;
+    font-size: 3em;
+    color: #000;
+    text-align: center;
+}
+
+h3.titleBody span {
+    color: #18c9d2;
+    border-bottom: 1px solid;
+}
 
 p span {
     color: #18c9d2;
@@ -567,6 +579,10 @@ p span {
 
 /*--project--*/
 
+.general {
+     margin-bottom: 2%;
+     margin-top: 2%;
+ }
 
 /*--flexisel--*/
 
@@ -742,7 +758,7 @@ a.diamond:hover p.servc-text {
 .footer {
     background: url(../images/banner2.jpg)no-repeat 0px 0px;
     background-size: cover;
-    padding: 7em 0;
+    padding: 2em 0;
 }
 
 .footer h3.title {
@@ -1010,7 +1026,60 @@ h3.title1 span {
 
 .offic-time {
     text-align: center;
+    margin-right: 4%;
+    margin-left: 4%;
 }
+
+/*publication*/
+
+.publication .icon {
+    float: right;
+    position: relative;
+    font-size: 35px;
+
+}
+
+.publication {
+    text-align: center;
+    border: double #18c9d2 5px;
+    margin-bottom: 2%;
+}
+
+.publication-top {
+    padding: 1em;
+    background-color: #d4d3d3;
+}
+
+.publication-top h4 {
+    font-size: 1.7em;
+    text-align: left;
+    color: #000000;
+}
+
+.publication-bottom {
+    padding: 1em 2em;
+    background-color: rgba(255, 255, 255, 0.63);
+
+}
+
+.publication-bottom h5 {
+    font-size: 1.1em;
+    color: #000000;
+    line-height: 1.8em;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.publication-bottom p {
+    font-size: 1em;
+    color: #000000;
+    margin-top: 0.5em;
+    margin-right: 55px;
+    line-height: 1.8em;
+    text-align: left;
+}
+
+/*publication*/
 
 .time-top {
     padding: 1em;
