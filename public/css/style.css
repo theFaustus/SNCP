@@ -129,6 +129,8 @@ nav.navbar.navbar-default {
 
 /*--hover effect6--*/
 
+/*treeview*/
+
 
 /* Yaku */
 
@@ -487,6 +489,23 @@ h3.titleBody {
 h3.titleBody span {
     color: #18c9d2;
     border-bottom: 1px solid;
+}
+
+h3.titleImage {
+    margin-top : 5%;
+    margin-bottom: 4%;
+    font-size: 3em;
+    color: #ffffff;
+    font-weight: 800;
+    text-align: center;
+    text-shadow: 2px 2px 8px #000000;
+}
+
+h3.titleImage span {
+    color: #18c9d2;
+    font-weight: 800;
+    border-bottom: 1px solid;
+    text-shadow: 2px 2px 8px #000000;
 }
 
 p span {
@@ -1041,7 +1060,7 @@ h3.title1 span {
 
 .publication {
     text-align: center;
-    border: double #18c9d2 5px;
+    border: solid #18c9d2 3px;
     margin-bottom: 2%;
 }
 
@@ -1080,6 +1099,75 @@ h3.title1 span {
 }
 
 /*publication*/
+
+/* archive */
+
+.arch .icon {
+    float: right;
+    position: relative;
+    font-size: 35px;
+
+}
+
+.arch {
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 2%;
+    margin-right: 4%;
+    margin-left: 4%;
+}
+
+.arch-top {
+    padding: 1em;
+    background-color: #383737;
+}
+
+.arch-top h4 {
+    font-size: 1.7em;
+    text-align: center;
+    color: #fff;
+}
+
+.arch-bottom {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #666764;
+
+}
+
+.arch-bottom h5 {
+    font-size: 1.1em;
+    color: #ffffff;
+    line-height: 1.8em;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.arch-bottom p {
+    font-size: 1em;
+    color: #ffffff;
+    margin-top: 0.5em;
+    margin-bottom: 5%;
+    margin-right: 100px;
+    line-height: 1.8em;
+    text-align: left;
+    float: left;
+}
+
+.arch-bottom ul {
+    font-size: 1em;
+    color: #ffffff;
+    margin-top: 0.5em;
+    margin-bottom: 7%;
+    margin-right: 100px;
+    line-height: 1.8em;
+    text-align: left;
+
+}
+
+
+
+
 
 .time-top {
     padding: 1em;
@@ -3315,3 +3403,5 @@ h2.typoh2 {
 
 
 /*--//responsive-design---*/
+
+
