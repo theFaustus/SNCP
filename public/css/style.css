@@ -468,7 +468,7 @@ h3.title span {
 h3.titleHeader {
     margin-left: 20%;
     margin-top : 1.5%;
-    margin-bottom: 4%;
+    margin-bottom: 1%;
     font-size: 1.8em;
     color: #000;
     font-weight: 800;
@@ -1130,7 +1130,7 @@ h3.title1 span {
 
 .arch-bottom {
     padding-top: 1em;
-    padding-bottom: 1em;
+    padding-bottom: 3em;
     background-color: #666764;
 
 }
@@ -1157,8 +1157,7 @@ h3.title1 span {
 .arch-bottom ul {
     font-size: 1em;
     color: #ffffff;
-    margin-top: 0.5em;
-    margin-bottom: 7%;
+    margin-bottom: 15%;
     margin-right: 100px;
     line-height: 1.8em;
     text-align: left;
