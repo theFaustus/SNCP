@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>ACP | Admin</title>
+    <title>ACP | Asociația chirurgilor pediatrici din Republica Moldova</title>
     <!-- Custom Theme files -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -17,8 +17,10 @@
         }
     </script>
     <!-- //Custom Theme files -->
+    <link href="{{asset('css/metro.css')}}" type="text/css" rel="stylesheet" media="all">
     <link href="{{asset('css/bootstrap.css')}}" type="text/css" rel="stylesheet" media="all">
     <link href="{{asset('css/style.css')}}" type="text/css" rel="stylesheet" media="all">
+
     <link rel="stylesheet" href="{{asset('css/flexslider.css')}}" type="text/css" media="screen" />
     <link rel="icon" type="image/png" href="{{asset('images/logo.png')}}" />
     <!-- js -->
@@ -27,6 +29,7 @@
     <!-- start-smooth-scrolling-->
     <script type="text/javascript" src="{{asset('js/move-top.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/easing.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/metro.js')}}"></script>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {

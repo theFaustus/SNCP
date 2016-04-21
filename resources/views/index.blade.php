@@ -41,14 +41,14 @@
                 <ul class="slides">
                     <li>
                         <div class="banner-info">
-                            <h2>Suntem medici bravo!</h2>
+                            <h3 class="titleImage">Suntem medici bravo!</h3>
                             <p>Da chiar suntem</p>
                             <a href="{{url('about')}}" class="effect6">Află mai multe...</a>
                         </div>
                     </li>
                     <li>
                         <div class="banner-info">
-                            <h2>Suntem medici deștepți!</h2>
+                            <h3 class="titleImage">Suntem medici deștepți!</h3>
                             <p>Fără nici o întrebare...</p>
                             <a href="{{url('about')}}" class="effect6">Află mai multe...</a>
                         </div>
@@ -83,8 +83,85 @@
                 <p>Suntem mereu la dispoziția dumnevoastră. </p>
             </div>
         </div>
+        <div class="general">
+            <div class="arch">
+                <div class="arch-top">
+                    <h4> Arhivă </h4>
+                </div>
+                <div class="arch-bottom">
+                    <div class="treeview" data-role="treeview">
+                        <ul>
+                            <li class="node collapsed">
+                                <span class="glyphicon glyphicon-triangle-right"></span>
+                                <span class="leaf"> Numar 1, 1995</span>
+                                <ul>
+                                    <li>
+                            <span class="leaf"><span
+                                        class="glyphicon glyphicon-folder-close"></span> Sorizana efemera</span>
+                                    </li>
+                                    <li>
+                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span> Basina excramesolata</span>
+                                    </li>
+                                    <li>
+                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span> Raserata intrcurinata</span>
+                                    </li>
+                                    <li>
+                            <span class="leaf"><span
+                                        class="glyphicon glyphicon-folder-close"></span> Borita fasena</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="node collapsed">
+                                <span class="glyphicon glyphicon-triangle-right"></span>
+                                <span class="leaf"> Numar 1, 2004</span>
+                                <ul>
+                                    <li>
+                            <span class="leaf"><span
+                                        class="glyphicon glyphicon-folder-close"></span> Sorizana efemera</span>
+                                    </li>
+                                    <li>
+                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span> Basina excramesolata</span>
+                                    </li>
+                                    <li>
+                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span> Raserata intrcurinata</span>
+                                    </li>
+                                    <li>
+                            <span class="leaf"><span
+                                        class="glyphicon glyphicon-folder-close"></span> Borita fasena</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="node">
+                                <span class="glyphicon glyphicon-triangle-right"></span>
+                                <span class="leaf"> Numar 1, 2008</span>
+                                <ul>
+                                    <li>
+                            <span class="leaf"><span
+                                        class="glyphicon glyphicon-folder-close"></span> Sorizana efemera</span>
+                                    </li>
+                                    <li>
+                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span> Basina excramesolata</span>
+                                    </li>
+                                    <li>
+                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span> Raserata intrcurinata</span>
+                                    </li>
+                                    <li>
+                            <span class="leaf"><span
+                                        class="glyphicon glyphicon-folder-close"></span> Borita fasena</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
 </div>
+</div>
+
 <div class="general">
     <div class="col-md-9 about-grids">
         <div class="publication">
@@ -179,7 +256,11 @@
         <div class="container">
             <div class="col-md-3 project-right ">
                 <h3 class="title">Partenerii <span> Noștri</span></h3>
-                <p>Ei sunt mereu alături de noi .</p>
+                <p>Ei sunt mereu alături de noi.
+                    Ei sunt mereu alături de noi .
+                    Ei sunt mereu alături de noi .
+                    Ei sunt mereu alături
+                </p>
             </div>
             <div class="col-md-9 project-left">
                 <!-- flex-slider -->
@@ -189,28 +270,36 @@
                             <ul id="flexiselDemo1" class="nbs-flexisel-ul" style="left: -285px; display: block;">
                                 <li class="nbs-flexisel-item" style="width: 285px;">
                                     <div class="project-grids">
-                                        <img src="{{asset('images/img1.jpg')}}" alt="">
+                                        <a href="http://www.felicia.md/" target="_blank">
+                                            <img src="{{asset('images/img1.jpg')}}" alt="">
+                                        </a>
                                         <div class="team-bottom">
                                         </div>
                                     </div>
                                 </li>
                                 <li class="nbs-flexisel-item" style="width: 285px;">
                                     <div class="project-grids">
-                                        <img src="{{asset('images/img2.jpg')}}" alt="">
+                                        <a href="http://www.felicia.md/" target="_blank">
+                                            <img src="{{asset('images/img2.jpg')}}" alt="">
+                                        </a>
                                         <div class="team-bottom">
                                         </div>
                                     </div>
                                 </li>
                                 <li class="nbs-flexisel-item" style="width: 285px;">
                                     <div class="project-grids">
-                                        <img src="{{asset('images/img3.jpg')}}" alt="">
+                                        <a href="http://farmaciafamiliei.md/" target="_blank">
+                                            <img src="{{asset('images/img3.jpg')}}" alt="">
+                                        </a>
                                         <div class="team-bottom">
                                         </div>
                                     </div>
                                 </li>
                                 <li class="nbs-flexisel-item" style="width: 285px;">
                                     <div class="project-grids">
-                                        <img src="{{asset('images/img4.jpg')}}" alt="">
+                                        <a href="http://farmaciafamiliei.md/" target="_blank">
+                                            <img src="{{asset('images/img4.jpg')}}" alt="">
+                                        </a>
                                         <div class="team-bottom">
                                         </div>
                                     </div>

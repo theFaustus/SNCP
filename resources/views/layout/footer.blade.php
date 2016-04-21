@@ -6,7 +6,7 @@
             <div class="col-md-6 footer-left">
                 <h5><a href="#">Ai vreo idee?</a></h5>
                 <div class="more">
-                    <a href="contact.html" class="effect6">Contactează-ne</a>
+                    <a href="{{url('contacts')}}" class="effect6">Contactează-ne</a>
                 </div>
             </div>
             <div class="col-md-6 footer-right">
