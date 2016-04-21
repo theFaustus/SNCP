@@ -18,3 +18,24 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('admin');
 });
+
+Route::get('/list', function () {
+    return view('view-publication');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+
+Route::get('/contacts', function () {
+    return view('contacts');
+});
+
+Route::get('/search', function () {
+    return view('search');
+});
+
+Route::get('blade', function () {
+    return view('child');
+});
