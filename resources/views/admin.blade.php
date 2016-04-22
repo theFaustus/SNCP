@@ -3,7 +3,8 @@
 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-left">
         <li class="active"><a
-                    href="{{url('index')}}"><span>A</span><span>C</span><span>A</span><span>S</span><span>Ă</span></a></li>
+                    href="{{url('index')}}"><span>A</span><span>C</span><span>A</span><span>S</span><span>Ă</span></a>
+        </li>
         <li><a href="{{url('search')}}"
                class="link link--yaku"><span>C</span><span>Ă</span><span>U</span><span>T</span><span>A</span><span>R</span><span>E</span></a>
         </li>
@@ -40,14 +41,70 @@
         <h3 class="title">Admin - Meniul de control</h3>
         <div class="services-info">
             <div class="servc-icon">
-                <a href="#" class="diamond"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                <a href="#addEdition" class="diamond" data-toggle="modal" data-target="#addEdition"><span
+                            class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                     <p class="servc-text">Adaugă număr</p>
                 </a>
             </div>
+            <div class="modal fade" id="addEdition" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Adaugă număr</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="contact-form">
+                                <form>
+                                    <input type="text" placeholder="Numele numărului" required title="Completează te rog câmpul">
+                                    <input type="submit" value="Adaugă">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Închide</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="servc-icon">
-                <a href="#" class="diamond"><span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                <a href="#" data-toggle="modal" data-target="#addArticle" class="diamond"><span class="glyphicon glyphicon-education" aria-hidden="true"></span>
                     <p class="servc-text">Adaugă articol</p>
                 </a>
+            </div>
+            <div class="modal fade" id="addArticle" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Adaugă articol</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="contact-form">
+                                <form>
+
+                                    <input type="text" class="article" placeholder="Titlul articolului" required title="Completează te rog câmpul">
+                                    <div class="clearfix"></div>
+                                    <input type="text" class="article" placeholder="Autorul articolului" required title="Completează te rog câmpul">
+                                    <div class="clearfix"></div>
+                                    <input type="text" class="article" placeholder="Instituția articolului" required title="Completează te rog câmpul">
+                                    <div class="clearfix"></div>
+                                    <textarea class="article" placeholder="Descriere" required title="Completează te rog câmpul"></textarea>
+                                    <div class="clearfix"></div>
+
+
+            <span class="file-input btn btn-primary btn-file">
+                Încarcă fișier&hellip; <input type="file" multiple>
+            </span>
+                                    <input type="submit" value="Adaugă">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Închide</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="servc-icon">
                 <a href="#" class="diamond"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
@@ -60,14 +117,57 @@
                 </a>
             </div>
             <div class="servc-icon">
-                <a href="#" class="diamond"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                <a href="#" data-toggle="modal" data-target="#changePass" class="diamond"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
                     <p class="servc-text">Schimbă parola</p>
                 </a>
             </div>
+            <div class="modal fade" id="changePass" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Schimbă parola</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="contact-form">
+                                <form>
+                                    <input type="text" placeholder="Parola precedentă" required title="Completează te rog câmpul">
+                                    <input type="text" placeholder="Parola nouă" required title="Completează te rog câmpul">
+                                    <input type="submit" value="Schimbă">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Închide</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="servc-icon">
-                <a href="#" class="diamond"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                <a href="#" data-toggle="modal" data-target="#changeMail" class="diamond"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                     <p class="servc-text">Schimbă email-ul</p>
                 </a>
+            </div>
+            <div class="modal fade" id="changeMail" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Schimbă email-ul</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="contact-form">
+                                <form>
+                                    <input type="text" placeholder="Noul email" required title="Completează te rog câmpul">
+                                    <input type="submit" value="Schimbă">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Închide</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="clearfix"></div>
         </div>

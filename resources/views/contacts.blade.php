@@ -38,11 +38,9 @@
         <h3 class="titleBody text-center">Contactează<span>-ne</span></h3>
         <div class="contact-info">
             <div class="col-md-8 contact-grids">
-                <h5>Gnissimos voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</h5>
-                <p>Landitiis praesentium eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                    voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecat atque
-                    corrupti quos dolores et quas molestias excepturi sint occaecat officia deserunt mollitia laborum et
-                    dolorum </p>
+                <h5>Contactează=ne și fii frumos contactează=ne și fii frumos contactează=ne și fii frumos</h5>
+                <p>contactează=ne și fii frumoscontactează=ne și fii frumoscontactează=ne și fii frumoscontactează=ne și fii
+                    frumoscontactează=ne și fii frumoscontactează=ne și fii frumos </p>
                 <div class="contact-form">
                     <h3 class="title1">Scrie-ne aici</h3>
                     <form>
