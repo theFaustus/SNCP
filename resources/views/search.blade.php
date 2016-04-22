@@ -36,6 +36,31 @@
     <h3 class="titleBody text-center">Caută prin <span>lucrările</span> existente</h3>
 
     <input class='form-control' type="text" name='search' id='search' placeholder='Scrie aici...'>
+    <div class="form-group">
+        <br>
+        <label style="margin-bottom: 10px;" class="col-md-2 control-label">Criterii de căutare</label>
+        <div class="col-md-5 selectContainer">
+            <select class="form-control" name="size">
+                <option value="">Alege criteriu</option>
+                <option value="author">Autori</option>
+                <option value="title">Titlu</option>
+                <option value="year">An</option>
+                <option value="edition">Ediție</option>
+            </select>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="form-group">
+        <br>
+        <label style="margin-bottom: 10px;" class="col-md-2 control-label">Mod de căutare</label>
+        <div class="col-md-5 selectContainer">
+            <select class="form-control" name="size">
+                <option value="">Alege mod</option>
+                <option value="and">ȘI</option>
+                <option value="or">SAU</option>
+            </select>
+        </div>
+    </div>
 
     <br>
     <br>
