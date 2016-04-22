@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/index', function () {
-    return view('index');
-});
+Route::get('/index', 'LatestArticleController@getLatestArticles');
 
 Route::get('/admin', function () {
     return view('admin');
@@ -43,3 +41,4 @@ Route::get('/search', function () {
 Route::get('blade', function () {
     return view('child');
 });
+

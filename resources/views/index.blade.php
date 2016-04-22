@@ -164,88 +164,23 @@
 
 <div class="general">
     <div class="col-md-9 about-grids">
-        <div class="publication">
-            <div class="publication-top">
-                <h4>Tema : Larafanirocodia interno-stricto faranisolacciuclara in varsta aploserenica</h4>
-            </div>
-            <div class="publication-bottom">
-                <h5>Autor : Huan Pablo de Estebalde </h5>
-                <h5>Data : 15985 înaintea erei noastre</h5>
-                <div class="icon">
-                    <a href="#" class="glyphicon glyphicon-print" aria-hidden="true">
-                    </a>
+        @foreach($articleList as $article)
+            <div class="publication">
+                <div class="publication-top">
+                    <h4> {{$article['romanian_title']}}</h4>
                 </div>
-                <p>Am studiat această problemă detâta că e bine să știi să studiezi această problemă care am studiat-o
-                    detâta că e bine să știi să studiezi această problemă care am studiat-o detâta că e bine să știi să
-                    studiezi această problemă care am studiat-o</p>
-
-            </div>
-
-        </div>
-        <div class="publication">
-            <div class="publication-top">
-                <h4>Tema : Larafanirocodia interno-stricto faranisolacciuclara in varsta aploserenica</h4>
-            </div>
-            <div class="publication-bottom">
-                <h5>Autor : Huan Pablo de Estebalde </h5>
-                <h5>Data : 15985 înaintea erei noastre</h5>
-                <div class="icon">
-                    <a href="#" class="glyphicon glyphicon-print" aria-hidden="true">
-                    </a>
+                <div class="publication-bottom">
+                    <h5>Autor(i) : {{$article['authors']}} </h5>
+                    <h5>Instituție(i) : {{$article['institution']}} </h5>
+                    <div class="icon">
+                        <a href="{{url('/getArticle/')}}/{{$article['article_file_name']}}"
+                           target="_blank" class="glyphicon glyphicon-print" aria-hidden="true">
+                        </a>
+                    </div>
+                    <p>{{$article['romanian_description']}}</p>
                 </div>
-                <p>Am studiat această problemă detâta că e bine să știi să studiezi această problemă care am studiat-o
-                    detâta că e bine să știi să studiezi această problemă care am studiat-o detâta că e bine să știi să
-                    studiezi această problemă care am studiat-o</p>
             </div>
-        </div>
-        <div class="publication">
-            <div class="publication-top">
-                <h4>Tema : Larafanirocodia interno-stricto faranisolacciuclara in varsta aploserenica</h4>
-            </div>
-            <div class="publication-bottom">
-                <h5>Autor : Huan Pablo de Estebalde </h5>
-                <h5>Data : 15985 înaintea erei noastre</h5>
-                <div class="icon">
-                    <a href="#" class="glyphicon glyphicon-print" aria-hidden="true">
-                    </a>
-                </div>
-                <p>Am studiat această problemă detâta că e bine să știi să studiezi această problemă care am studiat-o
-                    detâta că e bine să știi să studiezi această problemă care am studiat-o detâta că e bine să știi să
-                    studiezi această problemă care am studiat-o</p>
-            </div>
-        </div>
-        <div class="publication">
-            <div class="publication-top">
-                <h4>Tema : Larafanirocodia interno-stricto faranisolacciuclara in varsta aploserenica</h4>
-            </div>
-            <div class="publication-bottom">
-                <h5>Autor : Huan Pablo de Estebalde </h5>
-                <h5>Data : 15985 înaintea erei noastre</h5>
-                <div class="icon">
-                    <a href="#" class="glyphicon glyphicon-print" aria-hidden="true">
-                    </a>
-                </div>
-                <p>Am studiat această problemă detâta că e bine să știi să studiezi această problemă care am studiat-o
-                    detâta că e bine să știi să studiezi această problemă care am studiat-o detâta că e bine să știi să
-                    studiezi această problemă care am studiat-o</p>
-            </div>
-        </div>
-        <div class="publication">
-            <div class="publication-top">
-                <h4>Tema : Larafanirocodia interno-stricto faranisolacciuclara in varsta aploserenica</h4>
-            </div>
-            <div class="publication-bottom">
-                <h5>Autor : Huan Pablo de Estebalde </h5>
-                <h5>Data : 15985 înaintea erei noastre</h5>
-                <div class="icon">
-                    <a href="#" class="glyphicon glyphicon-print" aria-hidden="true">
-                    </a>
-                </div>
-                <p>Am studiat această problemă detâta că e bine să știi să studiezi această problemă care am studiat-o
-                    detâta că e bine să știi să studiezi această problemă care am studiat-o detâta că e bine să știi să
-                    studiezi această problemă care am studiat-o</p>
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
 <div class="clearfix"></div>
