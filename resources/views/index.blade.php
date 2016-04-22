@@ -177,6 +177,7 @@
                            target="_blank" class="glyphicon glyphicon-print" aria-hidden="true">
                         </a>
                     </div>
+                    <h5>Descriere : <br></h5>
                     <p>{{$article['romanian_description']}}</p>
                 </div>
             </div>

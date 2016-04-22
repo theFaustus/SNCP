@@ -91,6 +91,8 @@
                                     <div class="clearfix"></div>
                                     <textarea class="article" placeholder="Descriere" required title="Completează te rog câmpul"></textarea>
                                     <div class="clearfix"></div>
+                                    <textarea class="article" placeholder="Rezumat" required title="Completează te rog câmpul"></textarea>
+                                    <div class="clearfix"></div>
 
 
             <span class="file-input btn btn-primary btn-file">

@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'LatestArticleController@getLatestArticles');
 
 Route::get('/index', 'LatestArticleController@getLatestArticles');
 
@@ -21,9 +19,8 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
-Route::get('/list', function () {
-    return view('view-publication');
-});
+Route::get('/list', 'ArticleController@getArticles');
+
 
 Route::get('/about', function () {
     return view('about');
