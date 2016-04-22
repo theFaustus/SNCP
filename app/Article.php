@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use DB;
 
 class Article extends BaseModel
 {
@@ -47,5 +48,19 @@ class Article extends BaseModel
             'publication_id' => Input::get('publication_id'), 'english_description' => Input::get('english_description'),
             'romanian_description' => Input::get('romanian_description'), 'article_file_name' => $fileName,
             'article_file_mime' => $fileMime));
+    }
+
+    public function getArticle($id) {
+        $articles = DB::table('articles')->
+        select('english_title', 'romanian_title',
+            'authors', 'institution', 'english_description', 'romanian_description', 'article_file_name',
+            'article_file_mime')->where('id', '=', $id)->get();
+        $article = array();
+        foreach ($articles as $a) {
+            $article = array('english_title' => $a->english_title, 'romanian_title' => $a->romanian_title,
+                'authors' => $a->authors, 'institution' => $a->institution, 'english_description' => $a->english_description,
+                'romanian_description' => $a->romanian_description, 'article_file_name' => $a->article_file_name);
+        }
+        return $article;
     }
 }
