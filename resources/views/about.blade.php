@@ -54,7 +54,7 @@
                                 Redactor versiune on-line:<br>
                                 <strong>Igor ŞTEFANEŢ</strong></p></td>
                     </tr>
-                   
+
                 </table>
             </div>
             <div class="clearfix"> </div>

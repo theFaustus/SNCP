@@ -1,5 +1,5 @@
 <!--footer-->
-<div class="footer">
+<div class="footer" style="margin-top: 50px;">
     <div class="container">
         <h3 class="title">Fii <span>alături</span></h3>
         <div class="footer-grids">
