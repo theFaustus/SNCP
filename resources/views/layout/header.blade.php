@@ -55,7 +55,7 @@
         <nav class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header navbar-left">
-                    <h1><a href="index.php"><img src="images/logo.png" alt="">ACP</a></h1>
+                    <h1><a href="{{url('index')}}"><img src="{{asset('images/logo2.png')}}" alt="">ACP</a></h1>
                 </div>
                 <!--navigation-->
                 <div class="navbar">

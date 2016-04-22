@@ -7,7 +7,7 @@
 }
 .treeview ul {
   margin: 0;
-  margin-top: 10px;
+  margin-top: 2px;
   padding: 0;
   list-style: none;
   width: 100%;
@@ -16,7 +16,7 @@
 .treeview li {
   font-size: inherit;
   padding: 2px 16px;
-  margin-top: 10px;
+  margin-top: 2px;
   cursor: pointer;
   position: relative;
   color: #ffffff;
