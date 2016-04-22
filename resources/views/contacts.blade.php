@@ -39,14 +39,22 @@
         <div class="contact-info">
             <div class="col-md-8 contact-grids">
                 <h5>Gnissimos voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</h5>
-                <p>Landitiis praesentium eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecat atque corrupti quos dolores et quas molestias excepturi sint occaecat officia deserunt mollitia laborum et dolorum </p>
+                <p>Landitiis praesentium eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecat atque
+                    corrupti quos dolores et quas molestias excepturi sint occaecat officia deserunt mollitia laborum et
+                    dolorum </p>
                 <div class="contact-form">
                     <h3 class="title1">Scrie-ne aici</h3>
                     <form>
                         <textarea placeholder="Mesajul" required=""></textarea>
                         <input type="text" placeholder="Numele, Prenumele" required="">
                         <input type="text" placeholder="Email" required="">
+
+            <span class="file-input btn btn-primary btn-file">
+                Încarcă fișier&hellip; <input type="file" multiple>
+            </span>
                         <input type="submit" value="Trimite">
+
                     </form>
                 </div>
             </div>
@@ -63,7 +71,7 @@
                     </p>
                 </div>
             </div>
-            <div class="clearfix"> </div>
+            <div class="clearfix"></div>
         </div>
 
     </div>
@@ -72,7 +80,8 @@
 
     <div style="width:100%;height:500px;max-width:100%;">
 
-        <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=centrul+mamei+si+copil&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
+        <iframe style="height:100%;width:100%;border:0;" frameborder="0"
+                src="https://www.google.com/maps/embed/v1/place?q=centrul+mamei+si+copil&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
 
 
     </div>
