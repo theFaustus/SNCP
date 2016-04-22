@@ -91,66 +91,19 @@
                 <div class="arch-bottom">
                     <div class="treeview" data-role="treeview">
                         <ul>
+                            @foreach ($publications as $publication)
                             <li class="node collapsed">
                                 <span class="glyphicon glyphicon-triangle-right"></span>
-                                <span class="leaf"> Numar 1, 1995</span>
+                                <span class="leaf"> {{$publication['publication_date']}} </span>
                                 <ul>
+                                    @foreach ($publication['titleList'] as $title)
                                     <li>
-                            <span class="leaf"><span
-                                        class="glyphicon glyphicon-folder-close"></span> Sorizana efemera</span>
+                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span> {{$title['title']}}</span>
                                     </li>
-                                    <li>
-                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span> Basina excramesolata</span>
-                                    </li>
-                                    <li>
-                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span> Raserata intrcurinata</span>
-                                    </li>
-                                    <li>
-                            <span class="leaf"><span
-                                        class="glyphicon glyphicon-folder-close"></span> Borita fasena</span>
-                                    </li>
+                                    @endforeach
                                 </ul>
                             </li>
-                            <li class="node collapsed">
-                                <span class="glyphicon glyphicon-triangle-right"></span>
-                                <span class="leaf"> Numar 1, 2004</span>
-                                <ul>
-                                    <li>
-                            <span class="leaf"><span
-                                        class="glyphicon glyphicon-folder-close"></span> Sorizana efemera</span>
-                                    </li>
-                                    <li>
-                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span> Basina excramesolata</span>
-                                    </li>
-                                    <li>
-                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span> Raserata intrcurinata</span>
-                                    </li>
-                                    <li>
-                            <span class="leaf"><span
-                                        class="glyphicon glyphicon-folder-close"></span> Borita fasena</span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="node">
-                                <span class="glyphicon glyphicon-triangle-right"></span>
-                                <span class="leaf"> Numar 1, 2008</span>
-                                <ul>
-                                    <li>
-                            <span class="leaf"><span
-                                        class="glyphicon glyphicon-folder-close"></span> Sorizana efemera</span>
-                                    </li>
-                                    <li>
-                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span> Basina excramesolata</span>
-                                    </li>
-                                    <li>
-                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span> Raserata intrcurinata</span>
-                                    </li>
-                                    <li>
-                            <span class="leaf"><span
-                                        class="glyphicon glyphicon-folder-close"></span> Borita fasena</span>
-                                    </li>
-                                </ul>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
