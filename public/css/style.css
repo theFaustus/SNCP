@@ -998,7 +998,7 @@ img.zoom-img:hover {
 .about,
 .about-team,
 .contact {
-    padding: 5em 0;
+
 }
 
 h3.title1 {
@@ -1019,6 +1019,7 @@ h3.title1 span {
 
 .about .grid-top h4 {
     font-size: 1.5em;
+    text-align: center;
     color: #222;
     letter-spacing: 4px;
 }
@@ -2327,6 +2328,7 @@ h2.typoh2 {
     }
     .about .grid-top h4 {
         font-size: 1.3em;
+        text-align: center;
         letter-spacing: 3px;
     }
     .about-grids.grid-top {
@@ -2371,9 +2373,11 @@ h2.typoh2 {
     }
     .about-team-grids h4 {
         margin: 1.2em 0 0.8em;
+        text-align: center;
     }
     .about-team-grids h4 span {
         font-size: 1.2em;
+        text-align: center;
     }
     .about-team-grids p {
         font-size: 0.9em;
@@ -2587,7 +2591,7 @@ h2.typoh2 {
     }
     .about-team-grids {
         width: 24.3%;
-        float: left;
+        text-align: center;
     }
     .about-team-grids p {
         font-size: 0.85em;
@@ -2601,6 +2605,7 @@ h2.typoh2 {
     }
     .about-team-grids h4 {
         font-size: 1em;
+        text-align: center;
     }
     .about-servcs h5 {
         font-size: 1.2em;
@@ -2864,7 +2869,6 @@ h2.typoh2 {
     }
     .about-team-grids {
         width: 46%;
-        float: left;
         margin: 0 0 1.5em 1.5em;
     }
     .about-team-grids:hover .caption {
@@ -3311,6 +3315,7 @@ h2.typoh2 {
         padding: 1em;
     }
     .about-team-grids h4 {
+        text-align: center;
         margin: 1em 0 0.5em;
     }
     .about-team-grids p {
