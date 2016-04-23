@@ -44,9 +44,11 @@
                 <div class="contact-form">
                     <h3 class="title1">Scrie-ne aici</h3>
                     <form>
-                        <textarea placeholder="Mesajul" required=""></textarea>
-                        <input type="text" placeholder="Numele, Prenumele" required="">
-                        <input type="text" placeholder="Email" required="">
+                        <input type="text" class="article" placeholder="Numele, Prenumele" required="">
+                        <input type="text" class="article" placeholder="Email" required="">
+                        <input type="text" class="article" placeholder="Subiectul" required="">
+                        <textarea class="article" placeholder="Mesajul" required=""></textarea>
+                        <div class="clearfix"></div>
 
             <span class="file-input btn btn-primary btn-file">
                 Încarcă fișier&hellip; <input type="file" multiple>
