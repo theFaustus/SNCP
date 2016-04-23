@@ -28,7 +28,7 @@ class AddArticleRequestController extends Controller
                 $fileName = 'article_requests/' . date('Y-m-d_H_m_s') . '-request-' . $f->getClientOriginalName();
                 Storage::disk('local')->put($fileName, file_get_contents($f->getRealPath()));
                 $file = '../storage/app/' . $fileName;
-                \Mail::raw(Input::get('messageBody'), function($message) use ($file)
+                if (\Mail::raw(Input::get('messageBody'), function($message) use ($file)
                 {
                     $message->subject(Input::get('subject'));
                     $message->replyTo(Input::get('replyTo'));
@@ -36,9 +36,11 @@ class AddArticleRequestController extends Controller
                     //$message->from('show_latest_articles@mail.com', 'Article');
                     $message->to('tranzistorized@gmail.com');
                     $message->attach($file);
-                }, function () use ($fileName) {
-                    Storage::disk('local')->delete($fileName);
-                });
+                })) {
+
+                        Storage::disk('local')->delete($fileName);
+
+                };
                 return 'success';
             }
         }
