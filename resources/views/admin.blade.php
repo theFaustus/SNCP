@@ -25,6 +25,8 @@
         <li><a href="{{url('contacts')}}"
                class="link link--yaku"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span><span>E</span></a>
         </li>
+        <li class="active"><a href="#"><span>A</span><span>D</span><span>M</span><span>I</span><span>N</span></a>
+        </li>
     </ul>
     <div class="clearfix"></div>
 </div>
@@ -35,9 +37,11 @@
 </div>
 </nav>
 </div>
-
+<div class="services">
+    <div class="container">
 
         <h3 class="title">Admin - Meniul de control</h3>
+        <div class="services-info">
         {{--
 
                 <!-- case success -->
@@ -92,7 +96,7 @@
                     <div class="servc-icon">
                         <a href="#" data-toggle="modal" data-target="#changeMail" class="diamond"><span
                                     class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                            <p class="servc-text">Schimbă email-ul</p>
+                            <p class="servc-text">Schimbă email</p>
                         </a>
                     </div>
                 </td>
