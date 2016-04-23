@@ -32,12 +32,12 @@ class Article extends BaseModel
             return false;
         }
         else {
-            if(Input::hasFile('file')) {
-                $f = Input::file('file');
+            if(Input::hasFile('file_name')) {
+                $f = Input::file('file_name');
                 $fileName = date('Y-m-d') . '-' . $f->getClientOriginalName();
                 Storage::disk('local')->put($fileName, file_get_contents($f->getRealPath()));
                 $this->insertArticle($fileName, $f->getMimeType());
-                return true;
+                return $fileName;
             }
         }
     }

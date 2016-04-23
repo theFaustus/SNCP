@@ -12,28 +12,29 @@ class AdminTasksController extends Controller
 {
     public function updateEmail(){
         $email = Input::get("email");
+        $admin = new \App\Administrator();
+        $admin->updateEmail(1, $email);
         return Redirect::away("admin");
     }
 
     public function updatePassword(){
         $newPassword = Input::get("newPassword");
         $oldPassword = Input::get("oldPassword");
+        $admin = new \App\Administrator();
+        $admin->updatePassword(1, $newPassword);
         return Redirect::away("admin");
     }
 
     public function createArticle(){
-        $article_title = Input::get("article_title");
-        $article_author = Input::get("article_author");
-        $article_institution = Input::get("article_institution");
-        $article_description = Input::get("article_description");
-        $article_resume = Input::get("article_resume");
+        $article = new \App\Article();
+        $fileName = $article->handleArticleFileUpload();
         return Redirect::away("admin");
     }
 
     public function createPublication(){
         $publication_title = Input::get("publication_title");
+        $publication = new \App\Publication();
+        $publication->createPublication($publication_title, date('Y-m-d'));
         return Redirect::away("admin");
     }
-
-
 }
