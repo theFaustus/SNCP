@@ -137,7 +137,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="contact-form">
-                                <form method="POST" action="{{url("/create_article")}}">
+                                <form method="POST" action="{{url("/create_article")}}" enctype="multipart/form-data">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                     <input type="text" name="article_title" class="article"
                                            placeholder="Titlul articolului"
@@ -161,7 +161,7 @@
 
 
             <span class="file-input btn btn-primary btn-file">
-                Încarcă fișier&hellip; <input type="file" multiple>
+                Încarcă fișier&hellip; <input type="file" name="file_name">
             </span>
                                     <input type="submit"
                                            value="Adaugă">
