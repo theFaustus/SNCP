@@ -101,6 +101,20 @@
                         </div>
                     </td>
                 </tr>
+
+            </table>
+            <table style="width: 100%;">
+                <tr>
+                    <td>
+                        <div class="servc-icon">
+                            <a href="#" class="diamond"><span
+                                        class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                                <p class="servc-text">Ieșire din admin</p>
+                            </a>
+                        </div>
+                    </td>
+
+                </tr>
             </table>
 
             <div class="modal fade" id="addEdition" role="dialog">
@@ -114,7 +128,7 @@
                             <div class="contact-form">
                                 <form id="publication_form" method="POST" action="{{url("/create_publication")}}">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <input  type="text" id="publication_title" name="publication_title"
+                                    <input type="text" id="publication_title" name="publication_title"
                                            placeholder="Numele numărului" required
                                            title="Completează te rog câmpul">
                                     <input type="submit" name="btn" id="btn" value="Adaugă">
@@ -167,7 +181,8 @@
                                           title="Completează te rog câmpul"></textarea>
                                     <div class="clearfix"></div>
                                     <br>
-                                <textarea class="form-control" class="article" name="article_resume" placeholder="Rezumat" required
+                                <textarea class="form-control" class="article" name="article_resume"
+                                          placeholder="Rezumat" required
                                           title="Completează te rog câmpul"></textarea>
                                     <div class="clearfix"></div>
                                     <br>
