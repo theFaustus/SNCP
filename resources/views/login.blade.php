@@ -37,7 +37,7 @@
 
         <div class="contact-form">
 
-            <form >
+            <form method="post">
                 <div class="col-centered">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input style="    float: none;

@@ -139,18 +139,18 @@
                             <div class="contact-form">
                                 <form method="POST" action="{{url("/create_article")}}" enctype="multipart/form-data">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <input class="form-control" type="text" name="article_title" class="article"
+                                    <input class="form-control" type="text" name="romanian_title" class="article"
                                            placeholder="Titlul articolului"
                                            required
                                            title="Completează te rog câmpul">
                                     <div class="clearfix"></div>
                                     <br>
-                                    <input class="form-control" type="text" name="article_author" class="article"
+                                    <input class="form-control" type="text" name="authors" class="article"
                                            placeholder="Autorul articolului" required
                                            title="Completează te rog câmpul">
                                     <div class="clearfix"></div>
                                     <br>
-                                    <input class="form-control" type="text" name="article_institution" class="article"
+                                    <input class="form-control" type="text" name="institution" class="article"
                                            placeholder="Instituția articolului" required
                                            title="Completează te rog câmpul">
                                     <div class="clearfix"></div>
@@ -163,7 +163,7 @@
                                     </div>
                                     <div class="clearfix"></div>
                                     <br>
-                                <textarea class="form-control" class="article" name="article_description" placeholder="Descriere" required
+                                <textarea class="form-control" class="article" name="romanian_description" placeholder="Descriere" required
                                           title="Completează te rog câmpul"></textarea>
                                     <div class="clearfix"></div>
                                     <br>

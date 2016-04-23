@@ -28,7 +28,7 @@ class Article extends BaseModel
     public function handleArticleFileUpload() {
         $rules = array('file' => 'required|mimes:doc,docx,pdf');
         $validator = Validator::make(Input::all(), $rules);
-        if($validator->fails()) {
+        if(/*$validator->fails()*/ false) {
             return false;
         }
         else {
@@ -43,9 +43,9 @@ class Article extends BaseModel
     }
 
     private function insertArticle($fileName, $fileMime) {
-        $this->createArticle(array('english_title' => Input::get('english_title'), 'romanian_title' => Input::get('romanian_title'),
+        $this->createArticle(array('english_title' => null, 'romanian_title' => Input::get('romanian_title'),
             'authors' => Input::get('authors'), 'institution' => Input::get('institution'),
-            'publication_id' => Input::get('publication_id'), 'english_description' => Input::get('english_description'),
+            'publication_id' => /*Input::get('publication_id')*/ 1, 'english_description' => null,
             'romanian_description' => Input::get('romanian_description'), 'article_file_name' => $fileName,
             'article_file_mime' => $fileMime));
     }

@@ -51,3 +51,10 @@ Route::post("/update_password","AdminTasksController@updatePassword");
 Route::post("/create_article","AdminTasksController@createArticle");
 
 Route::post("/create_publication","AdminTasksController@createPublication");
+
+Route::get('/admin', [
+    'middleware' => 'auth',
+    'uses' => 'LoginController@getAdminPage'
+]);
+Route::post('/login', 'LoginController@login');
+Route::get('/logout', 'LoginController@logout');
