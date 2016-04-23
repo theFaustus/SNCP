@@ -27,11 +27,14 @@
     <!-- js -->
 
     <script src="{{asset('js/jquery-1.11.1.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/jquery.validate.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/metro.js')}}"></script>
+
     <!-- //js -->
     <!-- start-smooth-scrolling-->
     <script type="text/javascript" src="{{asset('js/move-top.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/easing.js')}}"></script>
+
 
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
