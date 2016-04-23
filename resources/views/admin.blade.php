@@ -114,7 +114,7 @@
                             <div class="contact-form">
                                 <form id="publication_form" method="POST" action="{{url("/create_publication")}}">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <input type="text" id="publication_title" name="publication_title"
+                                    <input  type="text" id="publication_title" name="publication_title"
                                            placeholder="Numele numărului" required
                                            title="Completează te rog câmpul">
                                     <input type="submit" name="btn" id="btn" value="Adaugă">
@@ -139,25 +139,39 @@
                             <div class="contact-form">
                                 <form method="POST" action="{{url("/create_article")}}">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <input type="text" name="article_title" class="article"
+                                    <input class="form-control" type="text" name="article_title" class="article"
                                            placeholder="Titlul articolului"
                                            required
                                            title="Completează te rog câmpul">
                                     <div class="clearfix"></div>
-                                    <input type="text" name="article_author" class="article"
+                                    <br>
+                                    <input class="form-control" type="text" name="article_author" class="article"
                                            placeholder="Autorul articolului" required
                                            title="Completează te rog câmpul">
                                     <div class="clearfix"></div>
-                                    <input type="text" name="article_institution" class="article"
+                                    <br>
+                                    <input class="form-control" type="text" name="article_institution" class="article"
                                            placeholder="Instituția articolului" required
                                            title="Completează te rog câmpul">
                                     <div class="clearfix"></div>
-                                <textarea class="article" name="article_description" placeholder="Descriere" required
+                                    <br>
+                                    <div class="form-control" class="col-md-2 selectContainer" style="padding: 0px;">
+                                        <select class="form-control col-md-2" name="size">
+                                            <option value="">Alege număr</option>
+                                            <option value="nr">Număr 1</option>
+                                        </select>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <br>
+                                <textarea class="form-control" class="article" name="article_description" placeholder="Descriere" required
                                           title="Completează te rog câmpul"></textarea>
                                     <div class="clearfix"></div>
-                                <textarea class="article" name="article_resume" placeholder="Rezumat" required
+                                    <br>
+                                <textarea class="form-control" class="article" name="article_resume" placeholder="Rezumat" required
                                           title="Completează te rog câmpul"></textarea>
                                     <div class="clearfix"></div>
+                                    <br>
+
 
 
             <span class="file-input btn btn-primary btn-file">
