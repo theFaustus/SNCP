@@ -107,7 +107,7 @@
                 <tr>
                     <td>
                         <div class="servc-icon">
-                            <a href="#" class="diamond"><span
+                            <a href="{{url('/logout')}}" class="diamond"><span
                                         class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
                                 <p class="servc-text">Ieșire din admin</p>
                             </a>
