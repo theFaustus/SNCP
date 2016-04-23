@@ -41,12 +41,12 @@
                 <div class="col-centered">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input style="    float: none;
-    margin: 10px auto;" type="text" name="article_title" class="article" placeholder="Username"
+    margin: 10px auto;" type="text" name="email" class="article" placeholder="Email"
                        required
                        title="Completează te rog câmpul">
                 <div class="clearfix"></div>
                 <input style="    float: none;
-    margin: 10px auto;" type="password" name="article_author" class="article"
+    margin: 10px auto;" type="password" name="password" class="article"
                        placeholder="Parola" required
                        title="Completează te rog câmpul">
                     </div>
