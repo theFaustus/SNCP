@@ -149,6 +149,9 @@ nav.navbar.navbar-default {
     border: none;
 }
 
+
+
+
 /*--hover effect6--*/
 
 /*treeview*/
@@ -697,9 +700,6 @@ p span {
 
 .servc-icon {
     margin-top: 2%;
-
-    float: left;
-    margin-left: 12%;
     position: relative;
 }
 
@@ -1866,6 +1866,29 @@ a.callbacks1_s3:focus {
     -ms-border-radius: 3px;
 }
 
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+
+.contact-form input[type="password"] {
+    width: 37%;
+    color: #999;
+    background: none;
+    outline: none;
+    font-size: 0.9em;
+    padding: .6em .8em;
+    margin-right: 1.5em;
+    border: solid 1px #999;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+}
+
 .contact-form form input.article {
     position: relative;
     float: left;
@@ -1922,6 +1945,13 @@ a.callbacks1_s3:focus {
     background: #4D4D4D;
     color: #FFF;
 }
+
+
+
+
+
+
+
 
 .cnt-address h4 {
     color: #000;
