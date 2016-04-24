@@ -98,7 +98,8 @@
                                 <ul>
                                     @foreach ($publication['titleList'] as $title)
                                     <li>
-                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span> {{$title['title']}}</span>
+                                        <span class="leaf"><span class="glyphicon glyphicon-folder-close"></span>
+                                            <span onclick="location.href='{{url('/list/' . $title['id'])}}'">{{$title['title']}}</span></span>
                                     </li>
                                     @endforeach
                                 </ul>

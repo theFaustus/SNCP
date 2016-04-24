@@ -39,7 +39,7 @@
 <h3 class="titleBody text-center">Lista de <span>lucrări</span></h3>
 <div class="publicationTitle">
     <div class="publicationTitle-top">
-        <h4>Numărul, 2015</h4>
+        <h4>{{$publication['title']}}, {{$publication['publication_date']}}</h4>
     </div>
 </div>
 <div class="general">
@@ -58,7 +58,7 @@
                         </a>
                     </div>
                     <h5>Rezumat : <br></h5>
-                    <p>{{$article['romanian_description']}}</p>
+                    <p>{{$article['article_resume']}}</p>
                 </div>
             </div>
         @endforeach
