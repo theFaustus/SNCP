@@ -81,17 +81,40 @@ class Article extends BaseModel
     }
 
     public function getPublicationArticles($publicationId) {
+        $publication = new \App\Publication();
+        $articlePublication = $publication->getPublication($publicationId);
         $articles = DB::table('articles')->
         select('english_title', 'romanian_title',
             'authors', 'institution', 'english_description', 'romanian_description', 'article_file_name',
             'article_file_mime', 'article_resume')->orderBy('id', 'desc')->where('publication_id', '=', $publicationId)->get();
-        $articleList = array();
+        $articleList = array("publication" => $articlePublication);
         foreach ($articles as $a) {
-            $articleList[] = array('english_title' => $a->english_title, 'romanian_title' => $a->romanian_title,
+            $articleList['publication']['articleList'][] = array('english_title' => $a->english_title, 'romanian_title' => $a->romanian_title,
                 'authors' => $a->authors, 'institution' => $a->institution, 'english_description' => $a->english_description,
                 'romanian_description' => $a->romanian_description, 'article_file_name' => $a->article_file_name,
                 'article_resume' => $a->article_resume);
         }
         return $articleList;
+    }
+
+    public function getAllArticles() {
+        $pub = DB::table('publications')->select('id', 'title', DB::raw('YEAR(publication_date) as pub_date'))->get();
+        $publications = array();
+        foreach ($pub as $p) {
+            $publication = array('id' => $p->id, 'title' => $p->title,
+                'publication_date' => $p->pub_date, 'articleList' => array());
+            $articles = DB::table('articles')->select('id', 'english_title', 'romanian_title',
+                'authors', 'institution', 'english_description', 'romanian_description', 'article_file_name',
+                'article_file_mime', 'article_resume')->orderBy('id', 'desc')->where('publication_id', '=', $p->id)->get();
+            $article = array();
+            foreach ($articles as $a) {
+                $article[] = array('id' => $a->id, 'romanian_title' => $a->romanian_title, 'authors' => $a->authors,
+                    'institution' => $a->institution, 'romanian_description' => $a->romanian_description,
+                    'article_resume' => $a->article_resume, 'article_file_name' => $a->article_file_name);
+            }
+            $publication['articleList'] = $article;
+            $publications[] = $publication;
+        }
+        return $publications;
     }
 }

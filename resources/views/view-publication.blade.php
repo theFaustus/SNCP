@@ -37,35 +37,41 @@
 
 
 <h3 class="titleBody text-center">Lista de <span>lucrări</span></h3>
+@foreach ($articleList as $article)
 <div class="publicationTitle">
     <div class="publicationTitle-top">
-        <h4>{{$publication['title']}}, {{$publication['publication_date']}}</h4>
+        <h4>{{$article['title']}}, {{$article['publication_date']}}</h4>
     </div>
 </div>
+
+@foreach($article['articleList'] as $a)
 <div class="general">
     <div class="col-md-12 about-grids">
-        @foreach($articleList as $article)
+
             <div class="publication">
                 <div class="publication-top">
-                    <h4> {{$article['romanian_title']}}</h4>
+                    <h4> {{$a['romanian_title']}}  </h4>
                 </div>
                 <div class="publication-bottom">
-                    <h5>Autor(i) : {{$article['authors']}} </h5>
-                    <h5>Instituție(i) : {{$article['institution']}} </h5>
+                    <h5>Autor(i) : {{$a['authors']}}</h5>
+                    <h5>Instituție(i) : {{$a['institution']}}</h5>
                     <div class="icon">
-                        <a href="{{url('/getArticle/')}}/{{$article['article_file_name']}}"
+                        <a href="{{url('/getArticle/')}}/{{$a['article_file_name']}}"
                            target="_blank" class="glyphicon glyphicon-print" aria-hidden="true">
                         </a>
                     </div>
                     <h5>Rezumat : <br></h5>
-                    <p>{{$article['article_resume']}}</p>
+                    <p>{{$a['article_resume']}}</p>
                 </div>
             </div>
-        @endforeach
+
     </div>
 </div>
+@endforeach
+
 <div class="clearfix"></div>
 </div>
+@endforeach
 
 <div class="general">
     <div class="projects">

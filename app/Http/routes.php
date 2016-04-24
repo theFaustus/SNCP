@@ -21,7 +21,6 @@ Route::get('/login', function () {
     return view('login');
 });
 
-
 Route::get('/list', 'ArticleController@getArticles');
 Route::get('/list/{id}', 'ArticleController@getPublicationArticles');
 

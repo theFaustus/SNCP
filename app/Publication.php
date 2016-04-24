@@ -63,7 +63,7 @@ class Publication extends BaseModel
         */
         $pub = DB::table('publications')->select('title', DB::raw('YEAR(publication_date) as pub_date'))->where('id', '=', $id)->get();
         foreach ($pub as $p) {
-            $publication = array('title' => $p->title, 'publication_date' => $p->pub_date);
+            $publication = array('title' => $p->title, 'publication_date' => $p->pub_date, 'articleList' => array());
         }
        /* $articles = DB::table('articles')->
         select('english_title', 'romanian_title',
