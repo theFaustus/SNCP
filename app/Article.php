@@ -54,12 +54,13 @@ class Article extends BaseModel
         $articles = DB::table('articles')->
         select('english_title', 'romanian_title',
             'authors', 'institution', 'english_description', 'romanian_description', 'article_file_name',
-            'article_file_mime')->where('id', '=', $id)->get();
+            'article_file_mime', 'article_resume')->where('id', '=', $id)->get();
         $article = array();
         foreach ($articles as $a) {
             $article = array('english_title' => $a->english_title, 'romanian_title' => $a->romanian_title,
                 'authors' => $a->authors, 'institution' => $a->institution, 'english_description' => $a->english_description,
-                'romanian_description' => $a->romanian_description, 'article_file_name' => $a->article_file_name);
+                'romanian_description' => $a->romanian_description, 'article_file_name' => $a->article_file_name,
+                'article_resume' => $a->article_resume);
         }
         return $article;
     }
@@ -68,12 +69,28 @@ class Article extends BaseModel
         $articles = DB::table('articles')->
         select('english_title', 'romanian_title',
             'authors', 'institution', 'english_description', 'romanian_description', 'article_file_name',
-            'article_file_mime')->orderBy('id', 'desc')->take($limit)->get();
+            'article_file_mime', 'article_resume')->orderBy('id', 'desc')->take($limit)->get();
         $articleList = array();
         foreach ($articles as $a) {
             $articleList[] = array('english_title' => $a->english_title, 'romanian_title' => $a->romanian_title,
                 'authors' => $a->authors, 'institution' => $a->institution, 'english_description' => $a->english_description,
-                'romanian_description' => $a->romanian_description, 'article_file_name' => $a->article_file_name);
+                'romanian_description' => $a->romanian_description, 'article_file_name' => $a->article_file_name,
+                'article_resume' => $a->article_resume);
+        }
+        return $articleList;
+    }
+
+    public function getPublicationArticles($publicationId) {
+        $articles = DB::table('articles')->
+        select('english_title', 'romanian_title',
+            'authors', 'institution', 'english_description', 'romanian_description', 'article_file_name',
+            'article_file_mime', 'article_resume')->orderBy('id', 'desc')->where('publication_id', '=', $publicationId)->get();
+        $articleList = array();
+        foreach ($articles as $a) {
+            $articleList[] = array('english_title' => $a->english_title, 'romanian_title' => $a->romanian_title,
+                'authors' => $a->authors, 'institution' => $a->institution, 'english_description' => $a->english_description,
+                'romanian_description' => $a->romanian_description, 'article_file_name' => $a->article_file_name,
+                'article_resume' => $a->article_resume);
         }
         return $articleList;
     }

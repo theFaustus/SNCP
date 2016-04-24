@@ -39,16 +39,17 @@ class Publication extends BaseModel
         */
 
         $publications = DB::table('publications')->
-        select('id', 'publication_date')->orderBy('publication_date', 'desc')->groupBy('publication_date')->get();
+        select('id', DB::raw('YEAR(publication_date) as pub_date'))->orderBy('pub_date', 'desc')
+            ->groupBy('pub_date')->get();
         $publicationList = array();
         foreach ($publications as $p) {
             $publicationTitles = DB::table('publications')->select('id', 'title')->orderBy('title', 'asc')
-                ->where('publication_date', '=', $p->publication_date)->get();
+                ->where(DB::raw('YEAR(publication_date)'), '=', $p->pub_date)->get();
             $titleList = array();
             foreach ($publicationTitles as $title) {
                 $titleList[] = array('id' => $title->id, 'title' => $title->title);
             }
-            $publicationList[] = array('id' => $p->id, 'publication_date' => $p->publication_date,
+            $publicationList[] = array('id' => $p->id, 'publication_date' => $p->pub_date,
                 'titleList' => $titleList);
         }
         return $publicationList;
@@ -60,12 +61,11 @@ class Publication extends BaseModel
             'authors', 'institution', 'english_description', 'romanian_description', 'article_file_name',
             'article_file_mime')->where('publications.id', '=', $id)->get();
         */
-        $pub = DB::table('publications')->select('title', 'publication_date')->where('id', '=', $id)->get();
+        $pub = DB::table('publications')->select('title', DB::raw('YEAR(publication_date) as pub_date'))->where('id', '=', $id)->get();
         foreach ($pub as $p) {
-            $publication = array('title' => $p->title, 'publication_date' => $p->publication_date,
-                'articleList' => array());
+            $publication = array('title' => $p->title, 'publication_date' => $p->pub_date);
         }
-        $articles = DB::table('articles')->
+       /* $articles = DB::table('articles')->
         select('english_title', 'romanian_title',
             'authors', 'institution', 'english_description', 'romanian_description', 'article_file_name',
             'article_file_mime')->where('publication_id', '=', $id)->get();
@@ -75,7 +75,7 @@ class Publication extends BaseModel
                 'authors' => $a->authors, 'institution' => $a->institution, 'english_description' => $a->english_description,
                 'romanian_description' => $a->romanian_description, 'article_file_name' => $a->article_file_name);
         }
-        $publication['articleList'] = $articleList;
+        $publication['articleList'] = $articleList;*/
         return $publication;
     }
 }

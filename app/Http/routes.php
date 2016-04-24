@@ -23,6 +23,8 @@ Route::get('/login', function () {
 
 
 Route::get('/list', 'ArticleController@getArticles');
+Route::get('/list/{id}', 'ArticleController@getPublicationArticles');
+
 
 
 Route::get('/about', function () {
@@ -58,3 +60,5 @@ Route::post('/login', 'LoginController@login');
 Route::get('/logout', 'LoginController@logout');
 
 Route::post('/article_request', 'AddArticleRequestController@handleArticleRequest');
+
+Route::get('/getArticle/{articleFileName}', 'ArticleController@getArticleFile');
