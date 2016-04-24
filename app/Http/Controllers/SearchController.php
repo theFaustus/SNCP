@@ -11,9 +11,15 @@ class SearchController extends Controller
 {
     public function getSearchResults()
     {
+
         $searchValue = Input::get('search');
         $searchCriteria = Input::get('criteria');
         $searchMode = Input::get('mode');
+
+
+        $search = new \App\Search();
+        return json_encode($search->search($searchValue, $searchCriteria, $searchMode));
+
 
         return json_encode(array(array('romanian_title'=> "George Carling`s Thoughts", 'authors' => "George Carling, Uncle Bob", 'institution' => "Internet",
             'romanian_description' => "Have you ever noticed that anybody driving slower than you is an idiot, and anyone going faster than you is a maniac?
