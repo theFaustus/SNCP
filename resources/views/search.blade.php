@@ -2,9 +2,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-left">
-        <li><a href="{{url('index')}}" class="link link--yaku"><span>A</span><span>C</span><span>A</span><span>S</span><span>Ă</span></a></li>
+        <li><a href="{{url('index')}}"
+               class="link link--yaku"><span>A</span><span>C</span><span>A</span><span>S</span><span>Ă</span></a></li>
         <li class="active"><a href="{{url('search')}}"
-               ><span>C</span><span>Ă</span><span>U</span><span>T</span><span>A</span><span>R</span><span>E</span></a>
+            ><span>C</span><span>Ă</span><span>U</span><span>T</span><span>A</span><span>R</span><span>E</span></a>
         </li>
         <li><a href="{{url('list')}}"
                class="link link--yaku"><span>L</span><span>I</span><span>S</span><span>T</span><span>A</span>
@@ -65,9 +66,80 @@
     <br>
     <br>
 
-    <h2 id="result" style="font-family: Georgia, 'Times New Roman'">
 
-    </h2>
+    <div class="publicationTitle">
+        <div class="publicationTitle-top">
+            <h4>Numărul, 2015</h4>
+        </div>
+    </div>
+    <div class="general">
+        <div class="col-md-12 about-grids">
+            <div class="publication">
+                <div class="publication-top">
+                    <h4> lalalalalalalalalala </h4>
+                </div>
+                <div class="publication-bottom">
+                    <h5>Autor(i) : tralalalalalal </h5>
+                    <h5>Instituție(i) : lololololololololo </h5>
+                    <div class="icon">
+                        <a href="#"
+                           target="_blank" class="glyphicon glyphicon-print" aria-hidden="true">
+                        </a>
+                    </div>
+                    <h5>Rezumat : <br></h5>
+                    <p>fifofifofifofoifiofiofiofifiofiofiofiofiofiofifiofioiofoi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="general">
+        <div class="col-md-12 about-grids">
+            <div class="publication">
+                <div class="publication-top">
+                    <h4> lalalalalalalalalala </h4>
+                </div>
+                <div class="publication-bottom">
+                    <h5>Autor(i) : tralalalalalal </h5>
+                    <h5>Instituție(i) : lololololololololo </h5>
+                    <div class="icon">
+                        <a href="#"
+                           target="_blank" class="glyphicon glyphicon-print" aria-hidden="true">
+                        </a>
+                    </div>
+                    <h5>Rezumat : <br></h5>
+                    <p>fifofifofifofoifiofiofiofifiofiofiofiofiofiofifiofioiofoi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="publicationTitle">
+        <div class="publicationTitle-top">
+            <h4>Numărul, 2015</h4>
+        </div>
+    </div>
+    <div class="general">
+        <div class="col-md-12 about-grids">
+            <div class="publication">
+                <div class="publication-top">
+                    <h4> lalalalalalalalalala </h4>
+                </div>
+                <div class="publication-bottom">
+                    <h5>Autor(i) : tralalalalalal </h5>
+                    <h5>Instituție(i) : lololololololololo </h5>
+                    <div class="icon">
+                        <a href="#"
+                           target="_blank" class="glyphicon glyphicon-print" aria-hidden="true">
+                        </a>
+                    </div>
+                    <h5>Rezumat : <br></h5>
+                    <p>fifofifofifofoifiofiofiofifiofiofiofiofiofiofifiofioiofoi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 @include('layout.footer')
 @include('layout.copyright')
