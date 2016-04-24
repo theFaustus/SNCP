@@ -14,13 +14,6 @@
         <li><a href="{{url('about')}}"
                class="link link--yaku"><span>D</span><span>E</span><span>S</span><span>P</span><span>R</span><span>E</span></a>
         </li>
-        <!-- <li><a href="#" class="dropdown-toggle link link--yaku" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>G</span><span>A</span><span>L</span><span>E</span><span>R</span><span>I</span><span>I</span><span class="caret"></span></a>
-             <ul class="dropdown-menu">
-                 <li><a class="hvr-bounce-to-bottom" href="gallery.php">Gallery1</a></li>
-                 <li><a class="hvr-bounce-to-bottom" href="gallery.php">Gallery2</a></li>
-                 <li><a class="hvr-bounce-to-bottom" href="gallery.php">Gallery3</a></li>
-             </ul>
-         </li>-->
         <li><a href="{{url('contacts')}}"
                class="link link--yaku"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span><span>E</span></a>
         </li>
@@ -33,6 +26,60 @@
 </nav>
 </div>
 
+<script>
+    var array = [];
+
+    $(document).ready(function () {
+
+        $('#search').keyup(function () {
+
+            var search = $('#search').val();
+            var searchCriteria = $('#criteria').val();
+            var searchMode = $('#mode').val();
+
+            $.ajax({
+                url: '{{url("/search_handler")}}'
+                , data: {
+                    search: search,
+                    criteria : searchCriteria,
+                    mode : searchMode
+                }
+                , type: 'GET'
+                , success: function (data) {
+                    if (!data.error) {
+                        //$('#result').html(data);
+                        parseFunction(data);
+                    }
+
+                }
+
+            });
+        })
+    })
+</script>
+
+<script>
+
+
+function parseFunction(response) {
+    array = JSON.parse(response)
+    var out = "";
+    var i;
+
+    for (i = 0; i < array.length; i++) {
+        out += "<div class=\"general\"><div class=\"col-md-12 about-grids\"><div class=\"publication\"><div class=\"publication-top\"><h4> Tema : " + array[i].romanian_title + "</h4> </div> <div class=\"publication-bottom\"> <h5>Autor(i) : " + array[i].authors + "</h5> <h5>Instituție(i) : " + array[i].institution + "</h5> <div class=\"icon\"> <a href=\"" + array[i].article_file_name + "\"target=\"_blank\" class=\"glyphicon glyphicon-print\" aria-hidden=\"true\"> </a> </div> <h5>Descriere : <br></h5> <p>" + array[i].romanian_description + "</p> </div> </div> </div> </div>";
+
+    }
+
+    $('#result').html(out);
+}
+
+
+
+
+
+</script>
+
 <div class="row" style="margin-left: 50px; margin-right: 50px;">
     <h3 class="titleBody text-center">Caută prin <span>lucrările</span> existente</h3>
 
@@ -41,12 +88,11 @@
         <br>
         <label style="margin-bottom: 10px;" class="col-md-2 control-label">Criterii de căutare</label>
         <div class="col-md-5 selectContainer">
-            <select class="form-control" name="size">
+            <select class="form-control" name="size" id="criteria">
                 <option value="">Alege criteriu</option>
-                <option value="author">Autori</option>
-                <option value="title">Titlu</option>
-                <option value="year">An</option>
-                <option value="edition">Ediție</option>
+                <option value="authors">Autori</option>
+                <option value="romanian_title">Titlu</option>
+                <option value="article_resume">Rezumat</option>
             </select>
         </div>
     </div>
@@ -55,7 +101,7 @@
         <br>
         <label style="margin-bottom: 10px;" class="col-md-2 control-label">Mod de căutare</label>
         <div class="col-md-5 selectContainer">
-            <select class="form-control" name="size">
+            <select class="form-control" name="size" id="mode">
                 <option value="">Alege mod</option>
                 <option value="and">ȘI</option>
                 <option value="or">SAU</option>
@@ -67,54 +113,12 @@
     <br>
 
 
-    <div class="publicationTitle">
-        <div class="publicationTitle-top">
-            <h4>Numărul, 2015</h4>
-        </div>
-    </div>
-    <div class="general">
-        <div class="col-md-12 about-grids">
-            <div class="publication">
-                <div class="publication-top">
-                    <h4> lalalalalalalalalala </h4>
-                </div>
-                <div class="publication-bottom">
-                    <h5>Autor(i) : tralalalalalal </h5>
-                    <h5>Instituție(i) : lololololololololo </h5>
-                    <div class="icon">
-                        <a href="#"
-                           target="_blank" class="glyphicon glyphicon-print" aria-hidden="true">
-                        </a>
-                    </div>
-                    <h5>Rezumat : <br></h5>
-                    <p>fifofifofifofoifiofiofiofifiofiofiofiofiofiofifiofioiofoi</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="general">
-        <div class="col-md-12 about-grids">
-            <div class="publication">
-                <div class="publication-top">
-                    <h4> lalalalalalalalalala </h4>
-                </div>
-                <div class="publication-bottom">
-                    <h5>Autor(i) : tralalalalalal </h5>
-                    <h5>Instituție(i) : lololololololololo </h5>
-                    <div class="icon">
-                        <a href="#"
-                           target="_blank" class="glyphicon glyphicon-print" aria-hidden="true">
-                        </a>
-                    </div>
-                    <h5>Rezumat : <br></h5>
-                    <p>fifofifofifofoifiofiofiofifiofiofiofiofiofiofifiofioiofoi</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="result" id="result">
 
-    <div class="clearfix"></div>
-    <div class="publicationTitle">
+
+        </div>
+
+{{--    <div class="publicationTitle">
         <div class="publicationTitle-top">
             <h4>Numărul, 2015</h4>
         </div>
@@ -139,6 +143,7 @@
             </div>
         </div>
     </div>
+    <div class="clearfix"></div>--}}
 
 </div>
 @include('layout.footer')
