@@ -121,17 +121,17 @@
         @foreach($articleList as $article)
             <div class="publication">
                 <div class="publication-top">
-                    <h4> {{$article['romanian_title']}}</h4>
+                    <h4><b> {{$article['romanian_title']}}</b></h4>
                 </div>
                 <div class="publication-bottom">
-                    <h5>Autor(i) : {{$article['authors']}} </h5>
-                    <h5>Instituție(i) : {{$article['institution']}} </h5>
+                    <h5><b>Autor(i) : </b>{{$article['authors']}} </h5>
+                    <h5><b>Instituție(i) : </b>{{$article['institution']}} </h5>
                     <div class="icon">
                         <a href="{{url('/getArticle/')}}/{{$article['article_file_name']}}"
                            target="_blank" class="glyphicon glyphicon-print" aria-hidden="true">
                         </a>
                     </div>
-                    <h5>Descriere : <br></h5>
+                    <h5><b>Descriere : </b><br></h5>
                     <p>{{$article['romanian_description']}}</p>
                 </div>
             </div>

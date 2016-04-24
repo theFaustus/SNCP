@@ -50,17 +50,17 @@
 
             <div class="publication">
                 <div class="publication-top">
-                    <h4> {{$a['romanian_title']}}  </h4>
+                    <h4><b> {{$a['romanian_title']}}  </b></h4>
                 </div>
                 <div class="publication-bottom">
-                    <h5>Autor(i) : {{$a['authors']}}</h5>
-                    <h5>Instituție(i) : {{$a['institution']}}</h5>
+                    <h5><b>Autor(i) : </b>{{$a['authors']}}</h5>
+                    <h5><b>Instituție(i) : </b>{{$a['institution']}}</h5>
                     <div class="icon">
                         <a href="{{url('/getArticle/')}}/{{$a['article_file_name']}}"
                            target="_blank" class="glyphicon glyphicon-print" aria-hidden="true">
                         </a>
                     </div>
-                    <h5>Rezumat : <br></h5>
+                    <h5><b>Rezumat : </b><br></h5>
                     <p>{{$a['article_resume']}}</p>
                 </div>
             </div>
