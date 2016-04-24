@@ -43,15 +43,16 @@
                     frumoscontactează=ne și fii frumoscontactează=ne și fii frumos </p>
                 <div class="contact-form">
                     <h3 class="title1">Scrie-ne aici</h3>
-                    <form>
-                        <input type="text" class="article" placeholder="Numele, Prenumele" required="">
-                        <input type="text" class="article" placeholder="Email" required="">
-                        <input type="text" class="article" placeholder="Subiectul" required="">
-                        <textarea class="article" placeholder="Mesajul" required=""></textarea>
+                    <form method="post" action="{{url('/article_request')}}" enctype="multipart/form-data">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="text" name="sender" class="article" placeholder="Numele, Prenumele" required="">
+                        <input type="text" name="replyToEmail" class="article" placeholder="Email" required="">
+                        <input type="text" name="subject" class="article" placeholder="Subiectul" required="">
+                        <textarea class="article" name="messageBody" placeholder="Mesajul" required=""></textarea>
                         <div class="clearfix"></div>
 
             <span class="file-input btn btn-primary btn-file">
-                Încarcă fișier&hellip; <input type="file" multiple>
+                Încarcă fișier&hellip; <input type="file" name="file">
             </span>
                         <input type="submit" value="Trimite">
 

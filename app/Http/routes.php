@@ -56,3 +56,5 @@ Route::get('/admin', [
 ]);
 Route::post('/login', 'LoginController@login');
 Route::get('/logout', 'LoginController@logout');
+
+Route::post('/article_request', 'AddArticleRequestController@handleArticleRequest');
