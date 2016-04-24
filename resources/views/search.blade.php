@@ -66,6 +66,8 @@ function parseFunction(response) {
     var out = "";
     var i;
 
+    out += "<div class=\"alert alert-success\" style=\"font-size: 15px;\">" + array.length + " articole găsite. </div>"
+
     for (i = 0; i < array.length; i++) {
         out += "<div class=\"general\"><div class=\"col-md-12 about-grids\"><div class=\"publication\"><div class=\"publication-top\"><h4> Tema : " + array[i].romanian_title + "</h4> </div> <div class=\"publication-bottom\"> <h5>Autor(i) : " + array[i].authors + "</h5> <h5>Instituție(i) : " + array[i].institution + "</h5> <div class=\"icon\"> <a href=\"" + array[i].article_file_name + "\"target=\"_blank\" class=\"glyphicon glyphicon-print\" aria-hidden=\"true\"> </a> </div> <h5>Descriere : <br></h5> <p>" + array[i].romanian_description + "</p> </div> </div> </div> </div>";
 
@@ -89,7 +91,7 @@ function parseFunction(response) {
         <label style="margin-bottom: 10px;" class="col-md-2 control-label">Criterii de căutare</label>
         <div class="col-md-5 selectContainer">
             <select class="form-control" name="size" id="criteria">
-                <option value="">Alege criteriu</option>
+                <optgroup label="Alege criteriu"></optgroup>
                 <option value="authors">Autori</option>
                 <option value="romanian_title">Titlu</option>
                 <option value="article_resume">Rezumat</option>
@@ -102,7 +104,7 @@ function parseFunction(response) {
         <label style="margin-bottom: 10px;" class="col-md-2 control-label">Mod de căutare</label>
         <div class="col-md-5 selectContainer">
             <select class="form-control" name="size" id="mode">
-                <option value="">Alege mod</option>
+                <optgroup label="Alege mod de căutare"></optgroup>
                 <option value="and">ȘI</option>
                 <option value="or">SAU</option>
             </select>
