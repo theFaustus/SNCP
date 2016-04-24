@@ -15,7 +15,7 @@ class Article extends BaseModel
     public $timestamps = false;
     protected $fillable = array('english_title', 'romanian_title', 'authors', 'institution',
         'publication_id', 'english_description', 'romanian_description', 'article_file_name',
-        'article_file_mime');
+        'article_file_mime', 'article_resume');
     
     public function createArticle($articleParameters) {
         Article::create($articleParameters);
@@ -34,7 +34,7 @@ class Article extends BaseModel
         else {
             if(Input::hasFile('file_name')) {
                 $f = Input::file('file_name');
-                $fileName = date('Y-m-d') . '-' . $f->getClientOriginalName();
+                $fileName = date('Y-m-d_H-m-s_') . '-' . $f->getClientOriginalName();
                 Storage::disk('local')->put($fileName, file_get_contents($f->getRealPath()));
                 $this->insertArticle($fileName, $f->getMimeType());
                 return $fileName;
@@ -45,9 +45,9 @@ class Article extends BaseModel
     private function insertArticle($fileName, $fileMime) {
         $this->createArticle(array('english_title' => null, 'romanian_title' => Input::get('romanian_title'),
             'authors' => Input::get('authors'), 'institution' => Input::get('institution'),
-            'publication_id' => /*Input::get('publication_id')*/ 1, 'english_description' => null,
+            'publication_id' => Input::get('publication_id'), 'english_description' => null,
             'romanian_description' => Input::get('romanian_description'), 'article_file_name' => $fileName,
-            'article_file_mime' => $fileMime));
+            'article_file_mime' => $fileMime, 'article_resume' => Input::get('article_resume')));
     }
 
     public function getArticle($id) {

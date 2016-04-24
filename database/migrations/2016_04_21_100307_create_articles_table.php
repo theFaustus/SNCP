@@ -22,6 +22,7 @@ class CreateArticlesTable extends Migration
             $table->longText('romanian_description');
             $table->string('article_file_name');
             $table->string('article_file_mime');
+            $table->text('article_resume');
         });
     }
 

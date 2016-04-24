@@ -170,9 +170,12 @@
                                     <div class="clearfix"></div>
                                     <br>
                                     <div class="form-control" class="col-md-2 selectContainer" style="padding: 0px;">
-                                        <select class="form-control col-md-2" name="size">
-                                            <option value="">Alege număr</option>
-                                            <option value="nr">Număr 1</option>
+                                        <select class="form-control col-md-2" name="publication_id">
+                                            <optgroup label="Alege număr">
+                                                @foreach($publicationList as $publication)
+                                                    <option value="{{$publication['id']}}">{{$publication['publication_title']}}</option>
+                                                @endforeach
+                                            </optgroup>
                                         </select>
                                     </div>
                                     <div class="clearfix"></div>

@@ -15,9 +15,7 @@ Route::get('/', 'LatestArticleController@getLatestArticles');
 
 Route::get('/index', 'LatestArticleController@getLatestArticles');
 
-Route::get('/admin', function () {
-    return view('admin');
-});
+Route::get('/admin', 'AdminTasksController@getAdminPage');
 
 Route::get('/login', function () {
     return view('login');

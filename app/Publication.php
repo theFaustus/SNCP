@@ -16,6 +16,16 @@ class Publication extends BaseModel
         Publication::create(array('title' => $title, 'publication_date' => $publicationDate));
     }
 
+    public function getPublicationList() {
+        $publications = DB::table('publications')->select('id', 'title')->
+            orderBy('publication_date', 'desc')->orderBy('title', 'asc')->get();
+        $publicationList = array();
+        foreach ($publications as $p) {
+            $publicationList[] = array('id' => $p->id, 'publication_title' => $p->title);
+        }
+        return $publicationList;
+    }
+
     public function selectPublicationArchive() {
         /*
         $publications = DB::table('publications')->

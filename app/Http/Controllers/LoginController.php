@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Redirect;
 class LoginController extends Controller
 {
     public function getAdminPage() {
-        return view('admin');
+        $p = new \App\Publication();
+        return View::make('admin', array('publicationList' => $p->getPublicationList()));
     }
 
     public function login() {
