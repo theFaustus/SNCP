@@ -39,6 +39,8 @@ Route::get('/search', function () {
     return view('search');
 });
 
+Route::get('/search_handler', 'SearchController@getSearchResults');
+
 Route::get('blade', function () {
     return view('child');
 });
