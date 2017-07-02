@@ -6,7 +6,7 @@
             </li>
         </ul>
         <div class="clearfix"> </div>
-        <p>© 2016 Asociația Chirurgilor Pediatrici din Republica Moldova.</p>
+        <p>© 2017 SNCP | AO Societatea Națională de Chirurgie Pediatrică din Republica Moldova.</p>
     </div>
 </div>
 <!--smooth-scrolling-of-move-up-->

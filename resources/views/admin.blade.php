@@ -2,6 +2,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-left">
+		<li><a
+                    href="{{url('news')}}"><span>N</span><span>O</span><span>U</span><span>T</span><span>Ă</span><span>Ț</span><span>I</span></a>
+        </li>
         <li><a class="link link--yaku"
                href="{{url('index')}}"><span>A</span><span>C</span><span>A</span><span>S</span><span>Ă</span></a>
         </li>
@@ -15,18 +18,11 @@
         <li><a href="{{url('about')}}"
                class="link link--yaku"><span>D</span><span>E</span><span>S</span><span>P</span><span>R</span><span>E</span></a>
         </li>
-        <!-- <li><a href="#" class="dropdown-toggle link link--yaku" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>G</span><span>A</span><span>L</span><span>E</span><span>R</span><span>I</span><span>I</span><span class="caret"></span></a>
-             <ul class="dropdown-menu">
-                 <li><a class="hvr-bounce-to-bottom" href="gallery.php">Gallery1</a></li>
-                 <li><a class="hvr-bounce-to-bottom" href="gallery.php">Gallery2</a></li>
-                 <li><a class="hvr-bounce-to-bottom" href="gallery.php">Gallery3</a></li>
-             </ul>
-         </li>-->
         <li><a href="{{url('contacts')}}"
                class="link link--yaku"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span><span>E</span></a>
         </li>
-        <li class="active"><a href="#"><span>A</span><span>D</span><span>M</span><span>I</span><span>N</span></a>
-        </li>
+{{--       --}}
+        <li></li>
     </ul>
     <div class="clearfix"></div>
 </div>
@@ -42,30 +38,6 @@
 
         <h3 class="title">Admin - Meniul de control</h3>
         <div class="services-info">
-            {{--
-
-                    <!-- case success -->
-                    <div class="modal fade" id="caseSuccess" role="dialog">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">Notificare</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="contact-form">
-                                        <h4>Cererea a fost procesată cu succes!<br><br><i style="font-size: 25px"
-                                                                                          class="glyphicon glyphicon-ok-circle"></i>
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Închide</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            --}}
             <table style="width: 100%; margin-top: 5%;">
                 <tr>
                     <td style="margin-left: 5%">
@@ -92,6 +64,8 @@
                             </a>
                         </div>
                     </td>
+                </tr>
+                <tr>
                     <td>
                         <div class="servc-icon">
                             <a href="#" data-toggle="modal" data-target="#changeMail" class="diamond"><span
@@ -100,7 +74,36 @@
                             </a>
                         </div>
                     </td>
+                    <td>
+                        <div class="servc-icon">
+                            <a href="#" data-toggle="modal" data-target="#addBanner" class="diamond"><span
+                                        class="glyphicon glyphicon-eye-open"
+                                        aria-hidden="true"></span>
+                                <p class="servc-text">Adaugă banere</p>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="servc-icon">
+                            <a href="#" data-toggle="modal" data-target="#deleteBanner" class="diamond"><span class="glyphicon glyphicon-eye-close"
+                                                              aria-hidden="true"></span>
+                                <p class="servc-text">Șterge banere</p>
+                            </a>
+                        </div>
+                    </td>
                 </tr>
+				<tr>
+				<td></td>
+				<td>
+                        <div class="servc-icon">
+                            <a href="#" data-toggle="modal" data-target="#addNews" class="diamond"><span class="glyphicon glyphicon-stats"
+                                                              aria-hidden="true"></span>
+                                <p class="servc-text">Adaugă noutate</p>
+                            </a>
+                        </div>
+                    </td>
+				</tr>
+
 
             </table>
             <table style="width: 100%;">
@@ -116,6 +119,7 @@
 
                 </tr>
             </table>
+
 
             <div class="modal fade" id="addEdition" role="dialog">
                 <div class="modal-dialog modal-lg">
@@ -180,7 +184,8 @@
                                     </div>
                                     <div class="clearfix"></div>
                                     <br>
-                                <textarea class="form-control" class="article" name="romanian_description" placeholder="Descriere" required
+                                <textarea class="form-control" class="article" name="romanian_description"
+                                          placeholder="Descriere" required
                                           title="Completează te rog câmpul"></textarea>
                                     <div class="clearfix"></div>
                                     <br>
@@ -206,16 +211,7 @@
                     </div>
                 </div>
             </div>
-            {{--<div class="servc-icon">
-                <a href="#" class="diamond"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                    <p class="servc-text">Adaugă banere</p>
-                </a>
-            </div>
-            <div class="servc-icon">
-                <a href="#" class="diamond"><span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-                    <p class="servc-text">Șterge banere</p>
-                </a>
-            </div>--}}
+            {{----}}
 
 
             <div class="modal fade" id="changePass" role="dialog">
@@ -235,6 +231,93 @@
                                            title="Completează te rog câmpul">
                                     <input type="submit"
                                            value="Schimbă">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Închide</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="addBanner" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Adaugă banner</h4>
+                            <p>Imaginea încărcată trebuie să fie de dimensiunea 200x200px!</p>
+                        </div>
+                        <div class="modal-body">
+                            <div class="contact-form">
+                                <form method="POST" action="{{url("/insert_ad")}}" enctype="multipart/form-data">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <select class="form-control col-md-2" name="empty_banner_id">
+                                        @if (count($freeAdList) == 0)
+                                            <optgroup label="Nu sunt locuri de plasare disponibile">
+                                            </optgroup>
+                                        @else
+                                            <optgroup label="Alege locul de plasare disponibil">
+                                                @foreach ($freeAdList as $ad)
+                                                    <option value="{{$ad['id']}}">Img{{$ad['id']}}</option>
+                                                @endforeach
+                                            </optgroup>
+                                        @endif
+                                    </select>
+                                    <input type="text" name="link_of_banner" placeholder="Linkul, exemplu: http://www.google.md" required
+                                           title="Completează te rog câmpul">
+                                    <span class="file-input btn btn-primary btn-file">
+                Încarcă imagine&hellip; <input type="file" name="new_banner_name">
+            </span>
+                                    @if (count($freeAdList) == 0)
+                                        <input type="submit"
+                                           value="Adaugă" disabled="disabled">
+                                    @else
+                                        <input type="submit"
+                                               value="Adaugă">
+                                        @endif
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Închide</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="deleteBanner" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Șterge banner</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="contact-form">
+                                <form method="POST" action="{{url("/delete_ad")}}">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <select class="form-control col-md-2" name="existent_banner_id">
+                                        @if (count($busyAdList) == 0)
+                                            <optgroup label="Nu sunt banere ce pot fi șterse">
+                                            </optgroup>
+                                        @else
+                                            <optgroup label="Alege banner-ul ce urmează a fi șters">
+                                                @foreach ($busyAdList as $ad)
+                                                    <option value="{{$ad['id']}}">Img{{$ad['id']}}</option>
+                                                @endforeach
+                                            </optgroup>
+                                        @endif
+                                    </select>
+                                    @if (count($busyAdList) == 0)
+                                        <input type="submit"
+                                           value="Șterge" disabled="disabled">
+                                    @else
+                                        <input type="submit"
+                                               value="Șterge">
+                                    @endif
                                 </form>
                             </div>
                         </div>

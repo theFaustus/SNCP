@@ -15,7 +15,7 @@
                         <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
                     </div>
                     <div class="col-xs-10 contact-grdr">
-                        <p>+111 222 3333 111</p>
+                        <p>069241779</p>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
@@ -24,7 +24,7 @@
                         <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
                     </div>
                     <div class="col-xs-10 contact-grdr">
-                        <p>Burebista 45</p>
+                        <p>Burebista 93</p>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
@@ -33,7 +33,7 @@
                         <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                     </div>
                     <div class="col-xs-10 contact-grdr">
-                        <p><a href="mailto:example@mail.com">imsp@mail.com</a></p>
+                        <p><a href="mailto:ao.sncp.rm@gmail.com">ao.sncp.rm@gmail.com</a></p>
                     </div>
                     <div class="clearfix"> </div>
                 </div>

@@ -2,7 +2,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-left">
-        <li><a href="{{url('index')}}"
+        		<li><a
+                    href="{{url('news')}}"><span>N</span><span>O</span><span>U</span><span>T</span><span>Ă</span><span>Ț</span><span>I</span></a>
+        </li>
+		<li><a href="{{url('index')}}"
                class="link link--yaku"><span>A</span><span>C</span><span>A</span><span>S</span><span>Ă</span></a></li>
         <li><a href="{{url('search')}}"
                class="link link--yaku"><span>C</span><span>Ă</span><span>U</span><span>T</span><span>A</span><span>R</span><span>E</span></a>
@@ -43,7 +46,7 @@
                 <div class="contact-form">
                     <h3 class="title1">Scrie-ne aici</h3>
                     <form method="post" action="{{url('/article_request')}}" enctype="multipart/form-data">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input required type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="text" name="sender" class="article" placeholder="Numele, Prenumele" required="">
                         <input type="text" name="replyToEmail" class="article" placeholder="Email" required="">
                         <input type="text" name="subject" class="article" placeholder="Subiectul" required="">
@@ -62,27 +65,17 @@
                 <div class="cnt-address">
                     <h3 class="title1">Adrese</h3>
                     <h4>Ne găsești pe</h4>
-                    <p>str. Burebista 45
+                    <p>str. Burebista 93
                         <span>Chișinău, Republica Moldova</span>
                     </p>
                     <h4>Contactează-ne</h4>
-                    <p>Telefon: +1 234 567 9871
-                        <span>FAX: +1 234 567 9871</span> E-mail: <a href="mailto:info@example.com">imsp@mail.com</a>
+                    <p>Telefon: 069241779
+                        <br>E-mail: <a href="mailto:ao.sncp.rm@gmail.com">ao.sncp.rm@gmail.com</a>
                     </p>
                 </div>
             </div>
             <div class="clearfix"></div>
         </div>
-
-    </div>
-</div>
-<div class="map" style="margin-bottom: -50px; margin-top: 50px;">
-
-    <div style="width:100%;height:500px;max-width:100%;">
-
-        <iframe style="height:100%;width:100%;border:0;" frameborder="0"
-                src="https://www.google.com/maps/embed/v1/place?q=centrul+mamei+si+copil&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
-
 
     </div>
 </div>

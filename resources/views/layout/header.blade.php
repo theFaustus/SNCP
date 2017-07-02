@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <title>ACP | Asociația chirurgilor pediatrici din Republica Moldova</title>
+    <title>SNCP | AO Societatea Națională de Chirurgie Pediatrică din Republica Moldova</title>
     <!-- Custom Theme files -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content="Asociația chirurgilor pediatrici din Republica Moldova"/>
+    <meta name="keywords" content="AO Societatea Națională de Chirurgie Pediatrică din Republica Moldova"/>
     <script type="application/x-javascript">
         addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
@@ -58,12 +58,12 @@
         <nav class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header navbar-left">
-                    <h1><a href="{{url('index')}}"><img src="{{asset('images/logo2.png')}}" alt="">ACP</a></h1>
+                    <h1><a href="{{url('index')}}"><img src="{{asset('images/logo2.png')}}" style="width: 105px; height: 100px;" alt="">SNCP</a></h1>
                 </div>
                 <!--navigation-->
                 <div class="navbar">
-                <h3 class="titleHeader"> Revistă ştiinţifico-practică medicală online a <span>asociației chirurgilor pediatrici</span>
-                    din Republica Moldova
+                <h3 class="titleHeader"> AO Societatea Națională de <span>Chirurgie Pediatrică</span><br> din Republica Moldova
+
                 </h3>
             </div>
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">

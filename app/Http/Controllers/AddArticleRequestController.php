@@ -35,13 +35,25 @@ class AddArticleRequestController extends Controller
                     $message->replyTo(Input::get('replyToEmail'));
                     $message->sender(Input::get('replyToEmail'));
                     //$message->from('show_latest_articles@mail.com', 'Article');
-                    $message->to('tranzistorized@gmail.com');
+                    $message->to('ao.sncp.rm@gmail.com');
                     $message->attach($file);
                 })) {
                         Storage::disk('local')->delete($fileName);
                 };
                 return Redirect::away("contacts");
-            }
+            } else {
+				if (\Mail::raw(Input::get('messageBody'), function($message)
+                {
+                    //$message->from(Input::get('sender'));
+                    $message->subject(Input::get('subject'));
+                    $message->replyTo(Input::get('replyToEmail'));
+                    $message->sender(Input::get('replyToEmail'));
+                    //$message->from('show_latest_articles@mail.com', 'Article');
+                    $message->to('ao.sncp.rm@gmail.com');
+
+                })){};
+                return Redirect::away("contacts");
+			}
         }
     }
 }

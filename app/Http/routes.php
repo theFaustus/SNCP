@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', 'LatestArticleController@getLatestArticles');
 
 Route::get('/index', 'LatestArticleController@getLatestArticles');
@@ -63,3 +64,15 @@ Route::get('/logout', 'LoginController@logout');
 Route::post('/article_request', 'AddArticleRequestController@handleArticleRequest');
 
 Route::get('/getArticle/{articleFileName}', 'ArticleController@getArticleFile');
+
+Route::get('/getNews/{newsFileName}', 'NewsController@getNewsFile');
+
+Route::post('/delete_ad', 'AdController@handleAdDeletion');
+Route::post('/insert_ad', 'AdController@handleAdInsertion');
+
+
+Route::get('/ad_list', 'AdController@getAdList');
+
+Route::get('/getAdImage/{adImageName}', 'AdController@getAdImage');
+
+Route::get('/news', 'NewsController@getLatestNews');

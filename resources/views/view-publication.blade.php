@@ -2,6 +2,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-left">
+			<li><a
+                    href="{{url('news')}}"><span>N</span><span>O</span><span>U</span><span>T</span><span>Ă</span><span>Ț</span><span>I</span></a>
+        </li>
         <li ><a class="link link--yaku"
                     href="{{url('index')}}"><span>A</span><span>C</span><span>A</span><span>S</span><span>Ă</span></a>
         </li>
@@ -37,6 +40,14 @@
 
 
 <h3 class="titleBody text-center">Lista de <span>lucrări</span></h3>
+<p></p>
+<div style="margin: 40px 40px 40px 40px;">
+<h4>Dear colleagues,</h4><br>
+<p>Notice is hereby given that the National Society of Pediatric Surgeons from the Republic of Moldova announces the publication of the next volume of “Moldavian Journal of Pediatric Surgery” – a reviewed journal, registered in the National Books Administration. The discussed subjects will be linked to pediatric surgery, urology, neurosurgery, traumatology and orthopedics, anesthesiology and intensive care, neonatal surgery, cardiosurgery and varia.
+</p>
+<br><h4>Requirements</h4><br>
+<p>The article volume will be 5-8 pages (A4) (literature reviews up to 10 pages), it will be written in Microsoft Words, with 14 Times New Roman characters, intervals 1,5, all margins 2 cm. Articles should be in English. The paper should begin with authors name, surname, then the title with capital letters and institution from which the article come. The summary of 10-14 lines is mandatory. The article text follows and should contain introduction, materials and methods, results, discussion, conclusions and references and the first author correspondent address. Tables and pictures could be included in the paper, but with title and number. Pictures should be in the JPEG format. Tables will be attached apart. </p>
+</div>
 @foreach ($articleList as $article)
 <div class="publicationTitle">
     <div class="publicationTitle-top">
@@ -73,100 +84,8 @@
 </div>
 @endforeach
 
-<div class="general">
-    <div class="projects">
-        <div class="container">
-            <div class="col-md-3 project-right ">
-                <h3 class="title">Partenerii <span> Noștri</span></h3>
-                <p>Ei sunt mereu alături de noi.
-                    Ei sunt mereu alături de noi .
-                    Ei sunt mereu alături de noi .
-                    Ei sunt mereu alături
-                </p>
-            </div>
-            <div class="col-md-9 project-left">
-                <!-- flex-slider -->
-                <div class="work-bottom">
-                    <div class="nbs-flexisel-container">
-                        <div class="nbs-flexisel-inner">
-                            <ul id="flexiselDemo1" class="nbs-flexisel-ul" style="left: -285px; display: block;">
-                                <li class="nbs-flexisel-item" style="width: 285px;">
-                                    <div class="project-grids">
-                                        <a href="http://www.felicia.md/" target="_blank">
-                                            <img src="{{asset('images/img1.jpg')}}" alt="">
-                                        </a>
-                                        <div class="team-bottom">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nbs-flexisel-item" style="width: 285px;">
-                                    <div class="project-grids">
-                                        <a href="http://www.felicia.md/" target="_blank">
-                                            <img src="{{asset('images/img2.jpg')}}" alt="">
-                                        </a>
-                                        <div class="team-bottom">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nbs-flexisel-item" style="width: 285px;">
-                                    <div class="project-grids">
-                                        <a href="http://farmaciafamiliei.md/" target="_blank">
-                                            <img src="{{asset('images/img3.jpg')}}" alt="">
-                                        </a>
-                                        <div class="team-bottom">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="nbs-flexisel-item" style="width: 285px;">
-                                    <div class="project-grids">
-                                        <a href="http://farmaciafamiliei.md/" target="_blank">
-                                            <img src="{{asset('images/img4.jpg')}}" alt="">
-                                        </a>
-                                        <div class="team-bottom">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="nbs-flexisel-nav-left" style="top: 138px;"></div>
-                            <div class="nbs-flexisel-nav-right" style="top: 138px;"></div>
-                        </div>
-                    </div>
-                    <script type="text/javascript">
-                        $(window).load(function () {
-                            $("#flexiselDemo1").flexisel({
-                                visibleItems: 4
-                                , animationSpeed: 1000
-                                , autoPlay: true
-                                , autoPlaySpeed: 3000
-                                , pauseOnHover: true
-                                , enableResponsiveBreakpoints: true
-                                , responsiveBreakpoints: {
-                                    portrait: {
-                                        changePoint: 480
-                                        , visibleItems: 2
-                                    }
-                                    , landscape: {
-                                        changePoint: 640
-                                        , visibleItems: 3
-                                    }
-                                    , tablet: {
-                                        changePoint: 768
-                                        , visibleItems: 3
-                                    }
-                                }
-                            });
 
-                        });
-                    </script>
-                    <script type="text/javascript" src="{{asset('js/jquery.flexisel.js')}}"></script>
-                    <!-- //flex-slider -->
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-
+@include('layout.banner')
 @include('layout.footer')
 @include('layout.copyright')
 </body>
