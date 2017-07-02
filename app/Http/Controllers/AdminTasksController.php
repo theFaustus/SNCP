@@ -25,7 +25,13 @@ class AdminTasksController extends Controller
         return Redirect::away("admin");
     }
 
-    public function createArticle(){
+    public function createNews(){
+        $news = new \App\News();
+        $fileName = $news->handleNewsFileUpload();
+        return Redirect::away("admin");
+    }
+	
+	public function createArticle(){
         $article = new \App\Article();
         $fileName = $article->handleArticleFileUpload();
         return Redirect::away("admin");

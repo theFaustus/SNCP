@@ -52,6 +52,8 @@ Route::post("/update_password","AdminTasksController@updatePassword");
 
 Route::post("/create_article","AdminTasksController@createArticle");
 
+Route::post("/create_news","AdminTasksController@createNews");
+
 Route::post("/create_publication","AdminTasksController@createPublication");
 
 Route::get('/admin', [
@@ -68,6 +70,9 @@ Route::get('/getArticle/{articleFileName}', 'ArticleController@getArticleFile');
 Route::get('/getNews/{newsFileName}', 'NewsController@getNewsFile');
 
 Route::post('/delete_ad', 'AdController@handleAdDeletion');
+
+Route::post('/delete_news', 'NewsController@handleNewsDeletion');
+
 Route::post('/insert_ad', 'AdController@handleAdInsertion');
 
 

@@ -1,9 +1,13 @@
 <?php
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Input;
+
+
 class NewsController extends Controller
 {
 	public function getLatestNews()
@@ -22,6 +26,12 @@ class NewsController extends Controller
         $news = new \App\News();
         return Response::make($news->getFile($fileName), 200,
             array('content-type' => $news->getNewsFileMime($fileName)));
+    }
+	
+	public function handleNewsDeletion() {
+        $news = new \App\News();
+        $news->removeNews(Input::get('existent_news_id'));
+				return Redirect::away("admin");
     }
    
 }

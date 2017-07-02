@@ -93,7 +93,6 @@
                     </td>
                 </tr>
 				<tr>
-				<td></td>
 				<td>
                         <div class="servc-icon">
                             <a href="#" data-toggle="modal" data-target="#addNews" class="diamond"><span class="glyphicon glyphicon-stats"
@@ -102,7 +101,17 @@
                             </a>
                         </div>
                     </td>
+									<td></td>
+				<td>
+                        <div class="servc-icon">
+                            <a href="#" data-toggle="modal" data-target="#deleteNews" class="diamond"><span class="glyphicon glyphicon-remove"
+                                                              aria-hidden="true"></span>
+                                <p class="servc-text">Șterge noutate</p>
+                            </a>
+                        </div>
+                    </td>
 				</tr>
+
 
 
             </table>
@@ -213,6 +222,43 @@
             </div>
             {{----}}
 
+			<div class="modal fade" id="addNews" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Adaugă noutate</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="contact-form">
+                                <form method="POST" action="{{url("/create_news")}}" enctype="multipart/form-data">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <input class="form-control" type="text" name="title" class="news"
+                                           placeholder="Titlul noutății"
+                                           required
+                                           title="Completează te rog câmpul">
+                                    <div class="clearfix"></div>
+                                    <br>
+                                <textarea class="form-control" class="news" name="description"
+                                          placeholder="Descriere" required
+                                          title="Completează te rog câmpul"></textarea>
+                                    <div class="clearfix"></div>
+                                    <br>
+                               
+            <span class="file-input btn btn-primary btn-file">
+                Încarcă fișier&hellip; <input type="file" name="file_name">
+            </span>
+                                    <input type="submit"
+                                           value="Adaugă">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Închide</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="modal fade" id="changePass" role="dialog">
                 <div class="modal-dialog modal-lg">
@@ -312,6 +358,46 @@
                                         @endif
                                     </select>
                                     @if (count($busyAdList) == 0)
+                                        <input type="submit"
+                                           value="Șterge" disabled="disabled">
+                                    @else
+                                        <input type="submit"
+                                               value="Șterge">
+                                    @endif
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Închide</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			<div class="modal fade" id="deleteNews" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Șterge noutate</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="contact-form">
+                                <form method="POST" action="{{url("/delete_news")}}">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <select class="form-control col-md-2" name="existent_news_id">
+                                        @if (count($newsList) == 0)
+                                            <optgroup label="Nu sunt noutăți ce pot fi șterse">
+                                            </optgroup>
+                                        @else
+                                            <optgroup label="Alege noutatea ce urmează a fi ștearsă">
+                                                @foreach ($newsList as $n)
+                                                    <option value="{{$n['id']}}">Noutatea {{$n['id']}}</option>
+                                                @endforeach
+                                            </optgroup>
+                                        @endif
+                                    </select>
+                                    @if (count($newsList) == 0)
                                         <input type="submit"
                                            value="Șterge" disabled="disabled">
                                     @else

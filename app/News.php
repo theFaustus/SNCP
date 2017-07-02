@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Redirect;
 use DB;
 
 class News extends BaseModel
@@ -43,7 +44,7 @@ class News extends BaseModel
                 $f = Input::file('file_name');
                 $fileName = date('Y-m-d_H-m-s_') . '-' . $f->getClientOriginalName();
                 Storage::disk('local')->put($fileName, file_get_contents($f->getRealPath()));
-                $this->insertArticle($fileName, $f->getMimeType());
+                $this->insertNews($fileName, $f->getMimeType());
                 return $fileName;
             }
         }
@@ -72,14 +73,21 @@ class News extends BaseModel
 */
     public function getLatestNews($limit) {
         $news = DB::table('news')->
-        select('title', 'add_date',
+        select('id', 'title', 'add_date',
             'description', 'news_file_name',
             'news_file_mime')->orderBy('id', 'desc')->take($limit)->get();
         $newsList = array();
         foreach ($news as $a) {
-            $newsList[] = array('title' => $a->title, 'add_date' => $a->add_date,
+            $newsList[] = array('id' => $a->id, 'title' => $a->title, 'add_date' => $a->add_date,
                 'description' => $a->description, 'news_file_name' => $a->news_file_name, 'news_file_mime' => $a->news_file_mime);
         }
         return $newsList;
     }
+	
+
+	
+	public function removeNews($id) {
+        DB::table('news')->where('id', '=', $id)->delete();
+    }
+    
 }
